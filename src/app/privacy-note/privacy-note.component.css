@@ -1,0 +1,85 @@
+.pn-container{
+    width: 100vw;
+    /* height: 100vh; */
+}
+
+.pn-main{
+    width: 80vw;
+    margin: 0vh 10vw;
+}
+
+.pn-heading{
+    padding-top: 25vh;
+    /* height: 30vh; */
+    color: #177580;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.pn-heading-des{
+    color: white;
+    font-size: large;
+    font-weight: lighter;
+    margin-top: 10vh;
+}
+
+.s1-heading{
+    padding-top: 15vh;
+    margin-left: 3vw;
+    /* height: 30vh; */
+    color: #177580;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+.s1-des{
+    color: white;
+    margin-left: 3vw;
+    font-size: large;
+    font-weight: lighter;
+    margin-top: 5vh;
+}
+
+.s2-heading{
+    padding-top: 10vh;
+    /* height: 30vh; */
+    margin-left: 3vw;
+    color: #177580;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+.s2-des{
+    color: white;
+    margin-left: 3vw;
+    font-size: large;
+    font-weight: lighter;
+    margin-top: 5vh;
+}
+
+.s3-heading{
+    padding-top: 10vh;
+    margin-left: 3vw;
+    /* height: 30vh; */
+    color: #177580;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+.s3-des{
+    color: white;
+    margin-left: 3vw;
+    font-size: large;
+    font-weight: lighter;
+    margin-top: 5vh;
+}
+
+
+
+p{
+    margin: 5vh 0vw;
+}
+
+ul{
+    margin-left: 3vw;
+}

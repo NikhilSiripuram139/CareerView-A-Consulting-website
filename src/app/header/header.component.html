@@ -1,0 +1,57 @@
+<div class="header-container">
+    <div class="topheader">
+        <div class="socialid">
+            <nav>
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="main"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=en" target="main"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/" target="main"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/feed/" target="main"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sections">
+            <nav>
+                <ul>
+                    <li><a routerLink="Home" fragment="banner">search</a></li>
+                    <li><a routerLink="Home" fragment="sectors">sectors</a></li>
+                    <li><a routerLink="Home" fragment="services">services</a></li>
+                    <li><a routerLink="Home" fragment="testimony">testimony</a></li>
+                    <li><a routerLink="Home" fragment="contact">contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="bottomheader">
+        <div class="logo" routerLink="/Home">
+            <span id="s1">C</span>
+            <span id="s2">areer</span>
+            <span id="s3">V</span>
+            <span id="s4">iew</span>
+        </div>
+
+        <div class="links">
+            <nav>
+                <ul>
+                    <li><a routerLink="/Home" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+                    <li><a routerLink="/About" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">About us</a></li>
+                    <li><a routerLink="/Services" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">Services</a></li>
+                    <li><a routerLink="/Contact us" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="login" >
+            <div *ngIf="!showlog" >
+                <button  routerLink="/Login" (click)="onlogin()">Login</button>
+            </div>
+            <div *ngIf="showlog">
+                <button  routerLink="/Login" [queryParams]="{logout:true}" (click)="onlogin()">Logout</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- <app-log *ngIf="showlog" (logging)="logreceive($event)"></app-log> -->

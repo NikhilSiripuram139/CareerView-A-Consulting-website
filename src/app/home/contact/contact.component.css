@@ -1,0 +1,114 @@
+.contact-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.contact-main{
+    width: 80vw;
+    margin: 0vh 10vw;
+}
+
+.contact-head{
+    color: #177580;
+    padding-top: 15vh;
+    /* padding-top: 70px; */
+    /* height: 30vh; */
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-details{
+    width: 70vw;
+    margin: 10vh 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    width: 30vw;
+    height: 8vh;
+    margin: 2vh 2.2vw;
+    display: inline-block;
+}
+
+#name{
+    width: 30vw;
+    height: 5vh;
+    margin-top: 5px;
+    /* margin: 2vh 2.2vw;  */
+}
+
+.email{
+    width: 30vw;
+    height: 8vh;
+    margin: 2vh 2.1vw;
+    display: inline-block;
+}
+
+#email{
+    width: 30vw;
+    height: 5vh;
+    margin-top: 5px;
+    /* margin: 2vh 2.1vw;  */
+}
+
+.contact{
+    width: 30vw;
+    height: 8vh;
+    margin: 2vh 2.2vw;
+    display: inline-block;
+}
+
+#contact{
+    width: 30vw;
+    height: 5vh;
+    margin-top: 5px;
+    /* margin: 2vh 2.2vw;  */
+}
+
+.reagion{
+    width: 30vw;
+    height: 8vh;
+    margin: 2vh 2.1vw;
+    display: inline-block;
+}
+
+#Reagion{
+    width: 30vw;
+    height: 5vh;
+    margin-top: 5px;
+    /* margin: 2vh 2.1vw;  */
+}
+
+.meassage{
+    width: 65vw;
+    height: 18vh;
+    margin: 2vh 2.1vw;
+}
+
+.meassage h4{
+    margin-bottom: 5px;
+}
+
+/* #message{
+    
+    width: 6vw;
+    height: 10vh;
+    margin: 2vh 2.1vw; 
+} */
+
+.sub-btn{
+    width: 65vw;
+    height: 5vh;
+    margin: 2vh 2.1vw;
+    background-color: #b6ee1a;
+    /* font-size: larger;
+    font-weight: bold; */
+}
+

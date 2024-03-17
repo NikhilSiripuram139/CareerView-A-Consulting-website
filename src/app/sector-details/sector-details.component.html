@@ -1,0 +1,153 @@
+<div class="sd-container">
+    <div class="sd-main">
+        <div class="sd-content-table">
+            <div class="ct-head">
+                <p>Content</p>
+            </div>
+
+            <ul>
+                <li><a [routerLink]="'/Sectordetails/'+sectorid" fragment="what">What Is Marketing?</a></li>
+                <li><a [routerLink]="'/Sectordetails/'+sectorid" fragment="Understand">Understanding Marketing</a></li>
+                <li><a [routerLink]="'/Sectordetails/'+sectorid" fragment="Types">Types of Marketing Strategies</a></li>
+                <li><a [routerLink]="'/Sectordetails/'+sectorid" fragment="Benefits">Benefits</a></li>
+                <li><a [routerLink]="'/Sectordetails/'+sectorid" fragment="Limitations">Limitations</a></li>
+                <li><a [routerLink]="'/Sectordetails/'+sectorid" fragment="Bottom">The Bottom Line</a></li>
+            </ul>
+
+        </div>
+
+        <div class="sd-info">
+            <div class="sd-infohead">
+                <p>{{selectedsector.name}}</p>
+            </div>
+
+            <div class="sd-infodes">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni expedita culpa voluptatum porro quam fugiat nostrum saepe dignissimos nemo perspiciatis! Facere exercitationem commodi numquam est ab natus. Eum dolore unde, laudantium culpa temporibus reiciendis quidem corporis est doloremque amet sapiente odio deleniti! Nisi, veritatis. Voluptatem, accusantium similique. Voluptatibus harum nam maiores, ab amet eum?</p>
+                <img src="{{selectedsector.image1}}" alt="img">
+            </div>
+
+            <section id="what">
+                <div class="what">
+                    <div class="what-head">
+                        <p>What is {{selectedsector.name}}?</p>
+                    </div>
+    
+                    <div class="what-des">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia pariatur labore consequuntur voluptates sed explicabo laboriosam reiciendis natus ab, qui, rerum dicta alias maxime nostrum aspernatur totam nisi, accusantium quae ipsum! Dolores, consequuntur tenetur! Quaerat esse corrupti voluptatem? Illum facere iure doloribus impedit! Dicta, sapiente.</p>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam id harum, expedita beatae eius voluptatem dolorem accusantium architecto rerum, aliquid laboriosam tempore autem a? Magnam molestias corrupti eius minus consequuntur quaerat natus nihil.</p>
+    
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                            <li>Lorem ipsum dolor sit.</li>
+                        </ul>
+    
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores repudiandae voluptas facilis quis nihil nesciunt atque, modi porro eaque autem optio distinctio, explicabo minus et temporibus voluptates consequuntur accusantium esse earum praesentium amet natus consequatur repellat! Repellendus consequuntur numquam, mollitia incidunt libero ab distinctio minus impedit repudiandae molestias adipisci quidem omnis accusamus asperiores eaque harum est nihil, aspernatur praesentium! Laborum dolores adipisci aspernatur minima necessitatibus culpa eaque debitis velit porro voluptates maxime temporibus fugit, earum harum eligendi a.</p>
+    
+                    </div>
+                </div>
+            </section>
+
+            <section id="Understand">
+                <div class="Understand">
+                    <div class="Understand-head">
+                        <p>Understanding {{selectedsector.name}}</p>
+                    </div>
+    
+                    <div class="Understand-des">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quae iure placeat eum soluta quidem? Blanditiis, autem dolorem unde ducimus sint necessitatibus porro minima magni facilis nam! Tempore nihil hic mollitia laborum harum repudiandae quasi magni accusamus vitae assumenda, ex sapiente unde veritatis delectus, quidem facere nostrum vel fugit voluptatum neque numquam ab illo perferendis? Nemo dolor eius animi dolorum quo neque, sit distinctio id!</p>
+    
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi quia consectetur quibusdam autem neque sed, distinctio placeat blanditiis assumenda accusantium velit doloremque ratione aut repudiandae fuga saepe cupiditate corporis fugiat tempora. Fugiat animi, repellendus odit officiis necessitatibus incidunt illum saepe ipsam consectetur exercitationem quibusdam, neque tempore dicta?</p>
+    
+                        <img src="{{selectedsector.image2}}" alt="img">
+    
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem consequuntur quae distinctio tempore quod doloribus repudiandae velit dignissimos dolore non blanditiis ea inventore temporibus autem architecto quam dolor, ipsum officiis adipisci nisi illo quidem a eum asperiores? Iste quisquam quam recusandae nemo dolorem. Veniam quasi, suscipit a quo odio recusandae repudiandae molestias atque. At illum suscipit cum, minima velit optio neque unde repellendus voluptates laboriosam, sunt et quis modi enim impedit? Nisi iure consequuntur officiis? Saepe repellat qui, nulla nam assumenda ipsa enim ut ratione magnam nihil quas doloribus?</p>
+    
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos necessitatibus in exercitationem perspiciatis voluptatem deserunt quas nostrum veritatis earum. Quo, maiores ratione. Omnis velit ea eum accusamus molestias consequatur cupiditate quia tempore.</p>
+    
+                    </div>
+                </div>
+            </section>
+
+            <section id="Types">
+                <div class="Types">
+                    <div class="Types-head">
+                        <p>{{selectedsector.name}} and Strategies</p>
+                    </div>
+    
+                    <div class="Types-des">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio suscipit ipsam error iste doloremque quasi perferendis tempora officiis rem iusto mollitia sequi fuga deleniti sapiente, facilis inventore distinctio quaerat cupiditate aut ipsa. Laboriosam commodi aspernatur nesciunt, atque minima ipsum debitis iure eius qui?</p>
+    
+                        <ul>
+                            <li>Lorem, ipsum dolor.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li>Lorem ipsum dolor sit.</li>
+                            <li>Lorem, ipsum.</li>
+                        </ul>
+    
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quisquam voluptates nihil dolores! Ut atque suscipit, asperiores dolor, alias exercitationem architecto consectetur cumque veniam recusandae non doloremque, aspernatur quasi possimus natus nihil maxime assumenda ea! Provident optio ad perspiciatis quae explicabo. Laudantium quasi dolorem ex?</p>
+    
+                    </div>
+                </div>
+            </section>
+
+            <section id="Benefits">
+                <div class="Benefits">
+                    <div class="Benefits-head">
+                        <p>Benefits</p>
+                    </div>
+    
+                    <div class="Benefits-des">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam recusandae nesciunt molestiae accusamus a libero itaque nulla odit reiciendis suscipit expedita excepturi eligendi neque laboriosam dolores dignissimos, atque minima dolor optio? Voluptatem commodi quod, debitis porro fugit omnis eaque fugiat provident officiis tenetur!</p>
+    
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa voluptatibus dicta sapiente quos illo exercitationem cupiditate architecto nam autem fuga, praesentium similique, sint repellat rerum quae magni facilis repudiandae possimus vero ducimus!</p>
+    
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, sed. Blanditiis distinctio, ipsa sint suscipit pariatur iusto ab, sapiente illum numquam veritatis voluptatibus exercitationem dolorem accusantium culpa dignissimos ad eum corrupti nesciunt eveniet magnam necessitatibus impedit eius. Quisquam, nostrum in sunt excepturi mollitia reprehenderit earum necessitatibus repudiandae ex fugiat, deleniti voluptatem optio tempore ratione nemo quasi velit doloribus sint porro molestiae, asperiores rem? Odio, vel?</p>
+    
+                    </div>
+                </div>
+            </section>
+
+            <section id="Limitations">
+                <div class="Limitations">
+                    <div class="Limitations-head">
+                        <p>Limitations</p>
+                    </div>
+    
+                    <div class="Limitations-des">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, similique? Tenetur saepe consectetur facilis vero ab possimus minima autem dolores reprehenderit veritatis consequuntur soluta voluptatem itaque accusamus odio accusantium assumenda maxime sapiente, minus eos doloribus delectus sunt illo laborum. Earum sequi iure a distinctio incidunt nobis laborum eum ducimus blanditiis asperiores cupiditate illum nesciunt, hic ea libero assumenda nostrum. Amet officia sequi similique consectetur ad aperiam iste, nihil debitis distinctio animi quasi recusandae hic natus repudiandae?</p>
+    
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus pariatur adipisci beatae vitae non, soluta veritatis explicabo cumque, ab doloremque, earum eligendi voluptates omnis totam incidunt velit aperiam. Repellendus numquam fugiat veritatis distinctio aliquam, accusamus dicta eius quos, quas nesciunt temporibus, placeat doloremque.</p>
+    
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur tenetur ipsum quaerat deserunt hic deleniti libero accusantium commodi id? Accusamus libero, inventore odio totam doloribus harum ab alias ipsam molestiae voluptates atque, reiciendis, nulla omnis. Quod, commodi? Vero velit ipsam fuga, facilis facere explicabo recusandae.</p>
+    
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur libero laudantium quos in voluptate iure, exercitationem velit, dicta voluptas consequuntur ad molestiae dolorum perferendis similique sapiente cupiditate voluptatum.</p>
+    
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="Bottom">
+                <div class="Bottom-Line">
+                    <div class="Bottom-Line-head">
+                        <p>The Bottom Line</p>
+                    </div>
+    
+                    <div class="Bottom-Line-des">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eum ex minima, quia corrupti iste perferendis. Ipsum molestiae doloremque nisi laboriosam fuga aliquid omnis veniam, reprehenderit dolore eaque, expedita magni non odit debitis fugit recusandae nesciunt eius!</p>
+    
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, asperiores praesentium? Sapiente id corporis iure nobis minima pariatur, nulla repellendus vero suscipit eligendi officiis aspernatur.</p>
+    
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quae sequi unde totam voluptatum eligendi!</p>
+    
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem itaque, earum, maxime deleniti nulla minus, illo totam mollitia voluptatem fugit cum. Accusantium voluptates placeat id ex similique, velit esse pariatur voluptas molestiae! Maxime maiores dolores iure voluptatem eos unde nam distinctio eveniet nobis sunt illo harum repellendus sapiente itaque aspernatur ab minima, consectetur natus dicta. Laboriosam explicabo nemo temporibus.</p>
+    
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <button id="backhome" routerLink="/Careers">Go to sectors <i class="fa-solid fa-arrow-right"></i></button>
+</div>

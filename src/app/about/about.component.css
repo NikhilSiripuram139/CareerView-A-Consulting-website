@@ -1,0 +1,176 @@
+.about-container{
+    width: 100vw;
+    /* height: 100vh; */
+}
+
+.about-main{
+    width: 80vw;
+    margin: 0vh 10vw;
+}
+
+.about-heading{
+    padding-top: 25vh;
+    /* height: 30vh; */
+    color: #177580;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.section1{
+    width: 80vw;
+    height: 75vh;
+    margin-top: 10vh;
+    color: white;
+    display: block;
+}
+
+.section1 img{
+    width: 30vw;
+    height: 40vh;
+    float: right;
+    margin-top: 10vh;
+}
+
+.s1-head{
+    padding-top: 10vh;
+    color: #177580;
+    display: inline-block;
+    font-size: 50px;
+    /* font-weight:500px; */
+}
+
+.s1-des{
+    margin-left: 5vw;
+    padding-top: 5vh;
+    display: inline-block;
+    width: 45%;
+    font-size: large;
+    font-weight: lighter;
+}
+
+.section2{
+    width: 80vw;
+    height: 75vh;
+    color: white;
+    display: inline-block;
+    /* float: right;
+    clear: left; */
+}
+
+.section2 img{
+    padding-top: 10vh;
+    width: 30vw;
+    height: 40vh;
+    float: left;
+}
+
+.s2-head{
+    padding-top: 10vh;
+    margin-right: 20vw;
+    float: right;
+    color: #177580;
+    font-size: 50px;
+    /* font-weight: bold; */
+}
+
+.s2-des{
+    margin-left: 5vw;
+    padding-top: 5vh;
+    width: 45%;
+    float: right;
+    font-size: large;
+    font-weight: lighter;
+}
+
+.section3{
+    width: 80vw;
+    height: 75vh;
+    color: white;
+    display: block;
+    display: block;
+}
+
+.section3 img{
+    width: 30vw;
+    height: 40vh;
+    float: right;
+    margin-top: 10vh;
+}
+
+.s3-head{
+    padding-top: 10vh;
+    color: #177580;
+    font-size: 50px;
+    /* font-weight: bold; */
+}
+
+.s3-des{
+    margin-left: 5vw;
+    padding-top: 5vh;
+    width: 45%;
+    display: inline-block;
+    font-size: large;
+    font-weight: lighter;
+}
+
+.section4{
+    width: 80vw;
+    height: 75vh;
+    color: white;
+    display: block;
+}
+
+.section4 img{
+    padding-top: 10vh;
+    width: 30vw;
+    height: 40vh;
+    float: left;
+}
+
+.s4-head{
+    padding-top: 10vh;
+    margin-right: 25vw;
+    float: right;
+    color: #177580;
+    font-size: 50px;
+    /* font-weight: bold; */
+}
+
+.s4-des{
+    margin-left: 5vw;
+    padding-top: 5vh;
+    width: 45%;
+    float: right;
+    font-size: large;
+    font-weight: lighter;
+}
+
+.section5{
+    width: 80vw;
+    height: 75vh;
+    color: white;
+    display: block;
+}
+
+.section5 img{
+    width: 30vw;
+    height: 40vh;
+    float: right;
+    margin-top: 10vh;
+}
+
+.s5-head{
+    padding-top: 10vh;
+    color: #177580;
+    font-size: 50px;
+    /* font-weight: bold; */
+}
+
+.s5-des{
+    margin-left: 5vw;
+    padding-top: 5vh;
+    width: 45%;
+    display: inline-block;
+    font-size: large;
+    font-weight: lighter;
+}

@@ -1,0 +1,33 @@
+.tm-container{
+    width: 100vw;
+    /* height: 100vh; */
+}
+
+.tm-main{
+    width: 80vw;
+    margin: 0vh 10vw;
+}
+
+.tm-heading{
+    padding-top: 25vh;
+    /* height: 30vh; */
+    color: #177580;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.tm-heading-des{
+    color: white;
+    margin-left: 2vw;
+    font-size: large;
+    font-weight: lighter;
+    margin-top: 5vh;
+}
+
+p{
+    margin: 4vh 0vw;
+}
+
+ul{
+    margin-left: 3vw;
+}

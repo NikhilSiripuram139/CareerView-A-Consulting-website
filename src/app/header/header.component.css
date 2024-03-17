@@ -1,0 +1,140 @@
+.header-container{
+    width: 100vw;
+    position:fixed;
+    z-index: 1px;
+    top: 0;
+}
+
+.topheader{
+    width: 100vw;
+    height: 5vh;
+    background-color: #177580;
+}
+
+.bottomheader{
+    width: 100vw;
+    height: 10vh;
+    /* margin-top: 5vh; */
+    background-color: rgb(0, 0, 28);
+    color: white;
+    /* box-shadow: 0px -2px 20px 0px gray; */
+}
+
+.logo{
+    width: fit-content;
+    /* position: relative; */
+    background-color: none;
+    box-sizing: content-box;
+    color: #b6ee1a;
+    font-family:"Permanent Marker", "Caveat", "Pacifico", cursive;
+    font-weight: 400;
+    /* font-style: normal; */
+    font-size: x-large;
+    text-shadow: 3px 3px 6px gray;
+}
+
+.sections nav ul{
+    float: right;
+    padding-top: 10px;
+    margin-right: 20px;
+    color: black;
+    font-size: large;
+}
+
+.sections nav ul li{
+    list-style-type: none;
+    display: inline;
+}
+
+.active{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.socialid nav ul{
+    float: left;
+    margin-left: 43vw;
+    padding-top: 10px;
+    color: black;
+
+    /* background-color: black; */
+}
+
+.socialid nav ul li{
+    list-style-type: none;
+    display: inline;
+}
+
+.topheader a{
+    margin: 0px 10px;
+    text-decoration: none;
+    color: black;
+}
+
+i{
+    /* width: 30px; */
+    font-size: larger;
+}
+
+.bottomheader a{
+    margin: 0px 25px;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+
+.logo{
+    position: fixed;
+    top: 0;
+    float: left;
+    padding-top: 5px;
+    /* padding-bottom: 20px; */
+    margin-left: 20px;
+    font-size:xx-large;
+}
+
+.links nav ul{
+    float: left;
+    padding-top: 30px;
+    margin-left: 20vw;
+}
+
+.links nav ul li{
+    list-style-type: none;
+    display: inline;
+}
+
+.login{
+    float: right;
+    padding-top: 20px;
+    margin-right: 20px;
+}
+
+.login button{
+    width: 3vw;
+    height: 5vh;
+    margin-right: 20px;
+    font-size: larger;
+    color: white;
+    background-color:rgb(0, 0, 28);
+    border: none;
+}
+
+#s1{
+    font-size: 70px;
+    font-weight: bolder;
+}
+#s2{
+    font-size: 40px;
+    font-weight: bold;
+}
+#s3{
+    font-size: 70px;
+    font-weight: bolder;
+}
+#s4{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+

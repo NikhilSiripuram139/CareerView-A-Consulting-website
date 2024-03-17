@@ -1,0 +1,21 @@
+<div class="tm-container">
+    <div class="tm-main">
+        <div class="tm-head">
+            <p>What our clients think</p>
+        </div>
+
+        <div class="tm-clients">
+            <div class="divider"> 
+                <div class="clinet" *ngFor="let x of clients">
+                    <img src={{x.image}} alt="img">
+                    <div class="c-name">
+                        <p>{{x.name}}</p>
+                        <div class="c-review">
+                            <p>{{x.review}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

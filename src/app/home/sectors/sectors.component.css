@@ -1,0 +1,62 @@
+.sectors-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.sectors-main{
+    width: 90vw;
+}
+
+.sector-heading{
+    color: #177580;
+    padding-top: 15vh;
+    /* padding-top: 70px; */
+    /* height: 30vh; */
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sectors-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 5vw;
+}
+
+.divider{
+    width: 90vw;
+    height: 50vh;
+    /* margin: 10vh 10vw; */
+}
+
+.sector{
+    width: 31%;
+    height: 50%;
+    margin: 10px 11px;
+    display: inline-block;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    /* opacity: 0.7; */
+
+    color: black;
+    border: 1px solid black;
+}
+
+.name{
+    color: #ffffff;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: 38%;
+    text-align: end;
+}
+
+a{
+    float: right;
+    /* margin-left: 62vw; */
+    color: #b6ee1a;
+    text-decoration: none;
+}

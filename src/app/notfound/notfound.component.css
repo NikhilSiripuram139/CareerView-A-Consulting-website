@@ -1,0 +1,38 @@
+.nf-container{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nf-main{
+    margin-top: 10vh;
+    width: 80vw;
+    /* height: 100vh; */
+    /* height: 100%; */
+    background-color: #000000;
+    /* align-self: center; */
+    text-align: center;
+    /* color: white; */
+}
+
+.head{
+    font-size: x-large;
+    font-weight: bold;
+    color:#b6ee1a;
+}
+
+.err{
+    margin-top: 2vh;
+    font-size: large;
+    font-weight: bold;
+    color: #177580;
+}
+
+p{
+    margin-top: 2vh;
+    font-size: large;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+}

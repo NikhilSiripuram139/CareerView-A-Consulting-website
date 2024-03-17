@@ -1,0 +1,95 @@
+.footer-container{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    /* position: static; */
+}
+
+.footer-main{
+    width:80vw;
+    margin: 0vh 10vw;
+    padding-top: 5vh;
+}
+
+.tagline{
+    font-size: 40px;
+    font-weight: bold;
+    color: #177580;
+} 
+
+.attachments{
+    display: flex;
+    margin-top: 10vh;
+    /* justify-content: center; */
+}
+
+.attachments1{
+    margin-left: 5vw;
+    width: 20vw;
+    height: 22vh;
+    display: block;
+}
+
+.attachments2{
+    margin-left: 5vw;
+    width: 20vw;
+    height: 22vh;
+    display: block;
+}
+
+.attachments1 a{
+    /* margin-bottom: 10px; */
+    text-decoration: none;
+    font-size: large;
+    color: white;
+}
+
+.attachments2 a{
+    text-decoration: none;
+    /* margin-bottom: 10px; */
+    font-size: large;
+    color: white;
+}
+
+.attachments1 p{
+    margin-bottom: 10px;
+}
+
+.attachments2 p{
+    margin-bottom: 10px;
+}
+
+.bottom-footer{
+    display: flex;
+}
+
+.copyright{
+    margin:10px 10px;
+    color: white;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: #b6ee1a;
+    font-family:"Permanent Marker", "Caveat", "Pacifico", cursive;
+    font-weight: 40;
+    /* font-style: normal; */
+    font-size: large;
+}
+
+.socialid{
+    float: left;
+    /* margin-left: 2vw; */
+    padding-top: 15px;
+    color: white;
+
+    /* background-color: black; */
+}
+
+.socialid a{
+    margin: 0px 6px;
+    text-decoration: none;
+    color: #177580;
+    font-size: large;
+}

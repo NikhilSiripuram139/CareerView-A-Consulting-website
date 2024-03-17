@@ -1,0 +1,33 @@
+<div class="cs-container">
+    <div class="cs-main">
+        <div class="cs-heading">
+            <p>Career Options</p>
+        </div>
+
+        <div class="section1">
+            <div class="section1-head">
+                <p>We serve what you deserve</p>
+            </div>
+
+            <div class="section1-des">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore aspernatur ex explicabo alias doloremque velit quas amet hic. Vel, illo animi. Esse, aspernatur dolorem odio dolore repellendus voluptatem id nesciunt vitae voluptatibus sequi nihil ut impedit hic iste minus. Ut, aliquid ratione adipisci quisquam dignissimos consequatur tempore, sit temporibus consectetur officia reiciendis eius impedit unde.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quaerat exercitationem commodi quae repellendus enim similique quo officiis, suscipit voluptas amet assumenda corrupti illum quos quia sequi dicta expedita ut asperiores consequatur molestias! Qui nulla unde minima obcaecati error molestias quia atque autem commodi eaque?</p>
+            </div>
+        </div>
+
+        <div class="sectors-list">
+            <div class="divider">
+                <div class="sector" *ngFor="let x of careers">
+                    <div class="name" style="background-image: url({{x.image}});" [routerLink]="'/Sectordetails/'+x.id">
+                        <P>{{x.name}}</P>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <button id="backhome" routerLink="/Home">Go to home <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+</div>

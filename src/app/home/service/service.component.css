@@ -1,0 +1,84 @@
+.service-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.service-main{
+    width: 80vw;
+}
+
+.service-head{
+    color: #177580;
+    padding-top: 15vh;
+    /* padding-top: 70px; */
+    /* height: 30vh; */
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    /* text-align: center; */
+}
+
+.services{
+    width: 75vw;
+    height: 10vh;
+    margin: 0vh 2.5vw;
+    padding: 5vh 0vw;
+    /* background-color: #013442; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:large;
+}
+
+.service-name{
+    width: 14vw;
+    height: 10vh;
+    padding-top: 6vh;
+    display: inline-block;
+    /* background-color: black; */
+    color: white;
+    border-right: 3px solid black;
+}
+
+.service-description{
+    width: 40vw;
+    height: 15vh;
+    /* padding-top: 6vh; */
+    /* margin-top: 2vh; */
+    display: inline-block;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-left: 20px;
+    text-align: bottom;
+    /* align-self: center; */
+    /* background-color: #000000; */
+    color: white;
+}
+
+
+
+.service-btn{
+    width: 5vw;
+    display: inline-block;
+    background-color: none;
+    /* color: white; */
+}
+
+button{
+    margin-left: 6vw;
+    width: 3vw;
+    height: 10vh;
+    font-size:xx-large;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+a{
+    margin-left: 70vw;
+    color: #b6ee1a;
+    text-decoration: none;
+}

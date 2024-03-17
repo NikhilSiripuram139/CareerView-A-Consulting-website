@@ -1,0 +1,31 @@
+<div class="services-container">
+    <div class="services-main">
+        <div class="s-head">
+            <p>Services</p>
+        </div>
+
+        <div class="s-tagline">
+            <div class="maintag">
+                <p>Discover your next adventure here.</p>
+            </div>
+            <div class="sidetag">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit optio incidunt repellat animi perferendis neque accusamus quaerat voluptate deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae est harum enim deserunt asperiores corporis accusantium sunt ipsum praesentium? Ducimus explicabo quo debitis neque laudantium autem maxime molestias possimus dicta.</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="separater">
+                <div class="servies" *ngFor="let x of list" style="background-image: url({{x.image}});">
+                    <div>
+                        <!-- <img src="{{x.image}}" alt="img"> -->
+                        <!-- <p>{{x.description}}</p> -->
+                        <div class="name">
+                            <p>{{x.name}}</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
