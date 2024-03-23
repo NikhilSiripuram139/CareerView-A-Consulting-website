@@ -15,3 +15,7 @@ export const CanActivate=()=>{
     }
     
 }
+
+export const CanActivateChild=()=>{
+    return CanActivate();
+}

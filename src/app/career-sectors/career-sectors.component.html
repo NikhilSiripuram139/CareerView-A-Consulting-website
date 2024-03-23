@@ -19,7 +19,7 @@
         <div class="sectors-list">
             <div class="divider">
                 <div class="sector" *ngFor="let x of careers">
-                    <div class="name" style="background-image: url({{x.image}});" [routerLink]="'/Sectordetails/'+x.id">
+                    <div class="name" style="background-image: url({{x.image}});" [routerLink]="'Sectordetails/'+x.id">
                         <P>{{x.name}}</P>
                     </div>
                 </div>

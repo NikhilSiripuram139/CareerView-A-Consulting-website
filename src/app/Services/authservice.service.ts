@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import { EventEmitter, Injectable, Output, inject } from '@angular/core';
 import { UserserviceService } from './userservice.service';
 
 @Injectable({
@@ -6,7 +6,7 @@ import { UserserviceService } from './userservice.service';
 })
 export class AuthserviceService {
 
-  islogged:boolean;
+  islogged:boolean=false;
 
   userservice=inject(UserserviceService);
 
@@ -30,5 +30,4 @@ export class AuthserviceService {
     return this.islogged;
   }
 
-  
 }

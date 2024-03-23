@@ -54,30 +54,30 @@
                 <div class="divider">
                     <div class="name">
                         <h4>Name</h4>
-                        <input id="name" type="text" placeholder="Name">
+                        <input id="name" type="text" placeholder="Name" name="name" [(ngModel)]="name">
                     </div>
                     <div class="email">
                         <h4>Email</h4>
-                        <input id="email" type="text" placeholder="Email">
+                        <input id="email" type="text" placeholder="Email" name="email" [(ngModel)]="email">
                     </div>
                     <div class="contact">
                         <h4>Contact</h4>
-                        <input id="contact" type="text" placeholder="Contact">
+                        <input id="contact" type="text" placeholder="Contact" name="contact" [(ngModel)]="contact">
                     </div>
                     <div class="reagion">
                         <h4>Reagion</h4>
-                        <select aria-label="Reagion" id="Reagion">
+                        <select aria-label="Reagion" id="Reagion" name="reagion" [(ngModel)]="reagion">
                             <option value="Hyderabad">Hyderabad</option>
                             <option value="Chennai">Chennai</option>
                             <option value="pune">pune</option>
                             <option value="Bangalore">Bangalore</option>
                         </select>
                     </div>
-                    <div class="meassage">
+                    <div class="meassage" >
                         <h4>Message</h4>
-                        <textarea id="meassage" cols="139" rows="8" placeholder="Message"></textarea>
+                        <textarea id="meassage" cols="139" rows="8" placeholder="Message" name="Message" [(ngModel)]="message"></textarea>
                     </div>
-                    <button class="sub-btn">Submit</button>
+                    <button class="sub-btn" (click)="onsubmitclicked()">Submit</button>
                 </div>
             </div>    
         </div>

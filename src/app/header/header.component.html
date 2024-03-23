@@ -43,11 +43,11 @@
         </div>
 
         <div class="login" >
-            <div *ngIf="!showlog" >
-                <button  routerLink="/Login" (click)="onlogin()">Login</button>
+            <div *ngIf="!authservice.isauthenticated()" >
+                <button  routerLink="/Login" >Login</button>
             </div>
-            <div *ngIf="showlog">
-                <button  routerLink="/Login" [queryParams]="{logout:true}" (click)="onlogin()">Logout</button>
+            <div *ngIf="authservice.isauthenticated()">
+                <button  routerLink="/Login" [queryParams]="{logout:true}">Logout</button>
             </div>
         </div>
 

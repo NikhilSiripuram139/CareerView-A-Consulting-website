@@ -12,6 +12,8 @@ export class BannerComponent {
 
   router=inject(Router);
 
+  
+
   searchclicked(value){
     this.router.navigate(['/Careers'], {queryParams:{ search: value}});
   }

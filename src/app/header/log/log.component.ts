@@ -15,13 +15,6 @@ import { AuthserviceService } from '../../Services/authservice.service';
 })
 export class LogComponent implements OnInit{
 
-  @Output() logging: EventEmitter<boolean>=new EventEmitter<boolean>();
-  
-  
-
-  
-  
-
   // onlogin(){
   //   this.logging.emit(this.logged);
   // }
@@ -48,7 +41,7 @@ export class LogComponent implements OnInit{
     }
   }
 
-  
+  loginfo:boolean;
 
   loginclicked(){
     const username = this.username.nativeElement.value;
@@ -57,7 +50,7 @@ export class LogComponent implements OnInit{
     const user = this.authservice.login(username, passward);
 
     if(user===undefined){
-      alert("The login credentials you've entered are incorrect. Please check and try again.")
+      alert("The login credentials you've entered are incorrect. Please check and try again.");
     }
     else{
       alert("Welcom "+ user.name+". Your logged in.")
