@@ -3,7 +3,7 @@
         <div class="service-head">
             <p>Our Services</p>
         </div>
-
+ 
         <div class="services" *ngFor="let x of services" style="background-image: url({{x.image}});">
             <div class="color">
                 <div class="service-name">
@@ -13,7 +13,7 @@
                     <div class="description"><p>{{x.description}}</p></div>
                 </div>
                 <div class="service-btn">
-                    <button><i class="fa-solid fa-caret-right"></i></button>
+                    <button routerLink="/Services"><i class="fa-solid fa-caret-right"></i></button>
                 </div>
             </div>
         </div>

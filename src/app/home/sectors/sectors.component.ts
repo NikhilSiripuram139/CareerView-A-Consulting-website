@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { OptionsService } from '../../Services/options.service';
 import { option } from '../../models/careeroptions';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sectors',
@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
 export class SectorsComponent implements OnInit{
 
   careeroptions=inject(OptionsService);
+  router=inject(Router);
 
   careers:option[]=[];
 
@@ -21,5 +22,5 @@ export class SectorsComponent implements OnInit{
     this.careers=this.careeroptions.options;
   }
 
- 
+  
 }

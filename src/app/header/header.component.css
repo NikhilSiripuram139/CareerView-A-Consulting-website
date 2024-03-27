@@ -48,8 +48,11 @@
 }
 
 .active{
-    font-size: larger;
-    font-weight: bold;
+    /* font-size:x-large ; */
+    /* font-weight: bold; */
+    /* margin-left: 19.5vw; */
+    background-color: #373737;
+    border-radius: 10px;
 }
 
 .socialid nav ul{
@@ -103,6 +106,24 @@ i{
 .links nav ul li{
     list-style-type: none;
     display: inline;
+
+}
+
+.links nav ul li button{
+    width: 6vw;
+    font-size:medium;
+    color: white;
+    /* font-weight: 300; */
+    background-color: transparent;
+    border: transparent;
+    border-radius: 10px;
+}
+
+.links nav ul li a:hover{
+    /* font-size:larger; */
+    background-color: #373737;
+    border-radius: 10px;
+    
 }
 
 .login{

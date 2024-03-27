@@ -9,13 +9,17 @@ import { Router } from '@angular/router';
   styleUrl: './banner.component.css'
 })
 export class BannerComponent {
-
+ 
+  
   router=inject(Router);
 
-  
-
   searchclicked(value){
-    this.router.navigate(['/Careers'], {queryParams:{ search: value}});
+    if(value=== ''){
+      alert('Please enter some text in search box.')
+    }
+    else{
+      this.router.navigate(['/Careers'], {queryParams:{ search: value}});
+    }
   }
 
 }

@@ -13,7 +13,7 @@ import { CookiesPsComponent } from './cookies-ps/cookies-ps.component';
 import { AccessStatementComponent } from './access-statement/access-statement.component';
 import { SectorDetailsComponent } from './sector-details/sector-details.component';
 import { AuthguardserviceService } from './Services/authguardservice.service';
-import { CanActivate, CanActivateChild } from './authguard';
+import { CanActivate, CanActivateChild, resolve } from './authguard';
 
 export const routes: Routes = [
     { path:'', component: HomeComponent},
@@ -21,7 +21,7 @@ export const routes: Routes = [
     { path:'About', component: AboutComponent},
     { path:'Services', component: OurservicesComponent},
     { path:'Contact us', component: ContactusComponent, canDeactivate: [(comp: ContactusComponent)=>{comp.canExit()}]},
-    { path:'Careers', component: CareerSectorsComponent, resolve:{options:AuthguardserviceService}},
+    { path:'Careers', component: CareerSectorsComponent, resolve:{options:resolve}},
     { path:'Careers', canActivateChild:[CanActivateChild], children: [
         { path:'Sectordetails/:id', component: SectorDetailsComponent}
     ]},

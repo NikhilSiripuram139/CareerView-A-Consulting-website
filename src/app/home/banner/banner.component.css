@@ -77,12 +77,19 @@
 .search-btn{
     margin-top: 20px;
     margin-left: 10px;
-    background-color: black;
+    width: 5vw;
+    height: 5vh;
+    background-color: rgb(0, 0, 0);
     color: #177580;
     border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search-btn :hover{
     font-size: 20px;
 }
 
 i{
-    font-size:23px;
+    font-size:15px;
 }

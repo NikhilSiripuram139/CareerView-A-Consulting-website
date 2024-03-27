@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Event, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterOutlet } from '@angular/router';
+import { Event, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, ResolveEnd, ResolveStart, Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -20,10 +20,10 @@ export class AppComponent implements OnInit{
 
   ngOnInit(){
       this.router.events.subscribe((routerevent:Event)=>{
-        if(routerevent instanceof NavigationStart){
+        if(routerevent instanceof ResolveStart){
           this.showloader=true;
         }
-        if(routerevent instanceof NavigationEnd || routerevent instanceof NavigationCancel || routerevent instanceof NavigationError){
+        if(routerevent instanceof ResolveEnd || routerevent instanceof NavigationCancel || routerevent instanceof NavigationError){
           this.showloader=false;
         }
       })

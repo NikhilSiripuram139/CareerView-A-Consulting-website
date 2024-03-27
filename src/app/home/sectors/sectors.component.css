@@ -17,7 +17,7 @@
     font-size: 50px;
     font-weight: bold;
     text-align: center;
-}
+} 
 
 .sectors-box{
     display: flex;
@@ -31,26 +31,33 @@
     height: 50vh;
     /* margin: 10vh 10vw; */
 }
-
+ 
 .sector{
-    width: 31%;
-    height: 50%;
-    margin: 10px 11px;
+    width: 24vw;
+    height: 29vh;
+    margin: 1vh .5vw;
+    cursor: pointer;
     display: inline-block;
     background-color: white;
     background-size: cover;
     background-position: center;
     /* opacity: 0.7; */
-
     color: black;
     border: 1px solid black;
+}
+
+.sector:hover{
+    width: 26vw;
+    /* height: 31vh; */
+    margin: 0vh -.5vw;
+    box-shadow: 1px 3px 10px rgb(86, 85, 85);
 }
 
 .name{
     color: #ffffff;
     font-size: xx-large;
     font-weight: bolder;
-    margin-top: 38%;
+    margin-top: 24vh;
     text-align: end;
 }
 
