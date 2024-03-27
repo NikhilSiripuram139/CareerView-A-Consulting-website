@@ -23,7 +23,7 @@ export class ContactusComponent {
   }
 
   canExit(){
-    if((this.name || this.email || this.contact || this.reagion || this.message) && !this.issubmited){
+    if((this.name || this.email || this.contact || this.message)){
       return confirm("You've unsaved changes. Do you want to navigate away?");
     }
     else{

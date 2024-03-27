@@ -21,7 +21,7 @@ export const routes: Routes = [
     { path:'About', component: AboutComponent},
     { path:'Services', component: OurservicesComponent},
     { path:'Contact us', component: ContactusComponent, canDeactivate: [(comp: ContactusComponent)=>{comp.canExit()}]},
-    { path:'Careers', component: CareerSectorsComponent},
+    { path:'Careers', component: CareerSectorsComponent, resolve:{options:AuthguardserviceService}},
     { path:'Careers', canActivateChild:[CanActivateChild], children: [
         { path:'Sectordetails/:id', component: SectorDetailsComponent}
     ]},

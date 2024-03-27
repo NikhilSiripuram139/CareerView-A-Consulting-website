@@ -30,7 +30,7 @@ export class CareerSectorsComponent implements OnInit{
     })
 
     if(this.searchstring === undefined || this.searchstring === '' || this.searchstring === null || this.searchstring === 'all'){
-      this.careers=this.careeroptions.alloptions;
+      this.careers=this.activeroute.snapshot.data['options'];
     }else{
       this.careers=this.careeroptions.alloptions.filter(x=>x.name.toLowerCase().includes(this.searchstring.toLowerCase()));
     }

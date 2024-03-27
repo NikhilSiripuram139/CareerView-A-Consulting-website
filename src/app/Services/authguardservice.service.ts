@@ -1,8 +1,10 @@
 import { Injectable, inject } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, CanActivateChild, CanDeactivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, CanActivateChild, CanDeactivate, Resolve, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthserviceService } from './authservice.service';
 import { ContactComponent } from '../home/contact/contact.component';
+import { option } from '../models/careeroptions';
+import { OptionsService } from './options.service';
 
 export interface IDeactivateComponenet{
   canExit:()=>boolean | Observable<boolean> | Promise<boolean>;
@@ -11,10 +13,11 @@ export interface IDeactivateComponenet{
 @Injectable({
   providedIn: 'root'
 })
-export class AuthguardserviceService implements CanActivate, CanActivateChild, CanDeactivate<IDeactivateComponenet>{
+export class AuthguardserviceService implements CanActivate, CanActivateChild, CanDeactivate<IDeactivateComponenet>, Resolve<option[]>{
 
   authservice=inject(AuthserviceService);
   router=inject(Router);
+  optionservice=inject(OptionsService);
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean> {
       
@@ -33,6 +36,10 @@ export class AuthguardserviceService implements CanActivate, CanActivateChild, C
 
   canDeactivate(component: IDeactivateComponenet, currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
       return component.canExit();
+  }
+
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): option[] | Observable<option[]> | Promise<option[]> {
+      return this.optionservice.getalloptions();
   }
 
 }

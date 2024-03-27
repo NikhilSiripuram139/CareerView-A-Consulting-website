@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Event, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -11,8 +11,23 @@ import { FooterComponent } from './footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'routes';
+
+  showloader:boolean=false;
+
+  router=inject(Router);
+
+  ngOnInit(){
+      this.router.events.subscribe((routerevent:Event)=>{
+        if(routerevent instanceof NavigationStart){
+          this.showloader=true;
+        }
+        if(routerevent instanceof NavigationEnd || routerevent instanceof NavigationCancel || routerevent instanceof NavigationError){
+          this.showloader=false;
+        }
+      })
+  }
 
   onActive(data){
     if(typeof window !== 'undefined'){

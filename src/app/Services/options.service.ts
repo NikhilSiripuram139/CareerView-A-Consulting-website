@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { option } from '../models/careeroptions';
 import { details } from '../models/details';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -43,4 +45,13 @@ export class OptionsService {
     {id:10, name:'Trading', image1:'../../../assets/Trading1.jpg', image2:'../../../assets/Trading2.jpg'},
   ]
   
+  getalloptions(){
+    return new Observable<option[]>((data)=>{
+      setTimeout(()=>{
+        data.next(this.alloptions)
+      }, 4000)
+    })
+  }
+
+
 }
