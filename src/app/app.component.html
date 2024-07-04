@@ -1,18 +1,10 @@
 <div class="app-container">
   <app-header></app-header>
 
-
+  <router-outlet (activate)="onActive($event)"  ></router-outlet>
   
-  <router-outlet (activate)="onActive($event)" ></router-outlet>
-  
-  <div class="loader" *ngIf="showloader">
-    <div class="center">
-      <div class="ring">
-      </div>
-      <span>Loading...</span>
-    </div>
-  </div>
-
+  <app-preloader *ngIf="showloader"></app-preloader>
+  <app-snackbar></app-snackbar>
 
   
   <app-footer></app-footer>

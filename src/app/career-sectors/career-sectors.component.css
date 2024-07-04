@@ -56,7 +56,7 @@
 .name{
     width: 70vw;
     height: 35vh;
-    margin: 1vh 0vw;
+    margin: 1.5vh 0vw;
     color: white;
     /* padding-top: 30vh; */
     background-repeat: no-repeat;
@@ -66,6 +66,13 @@
     font-weight: bolder;
     margin-right: 1vw;
     text-align: end;
+}
+
+.name:hover{
+    width: 72vw;
+    /* height: 35.5vh; */
+    margin: 0vh -1vw;
+    /* box-shadow: 1px 3px 10px rgb(86, 85, 85); */
 }
 
 #backhome{
@@ -78,5 +85,8 @@
     float: right;
 }
 
+#backhome:hover{
+    color: white;
+}
 
 

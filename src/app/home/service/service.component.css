@@ -5,11 +5,13 @@
     justify-content: center;
     align-items: center;
 }
- 
+
 .service-main{
     width: 80vw;
+    margin: 0 10vw;
+    padding-left: 1vw;
 }
-
+ 
 .service-head{
     color: #177580;
     padding-top: 15vh;
@@ -37,8 +39,7 @@
 
 .services:hover{
     width: 77vw;
-    height: 11vh;
-    margin: 0vh 1.5vw;   
+    margin: 1vh 1.5vw;   
 }
 
 .service-name{
@@ -88,6 +89,10 @@ button{
 
 a{
     margin-left: 70vw;
-    color: #b6ee1a;
+    color:#177580;
     text-decoration: none;
+}
+
+a:hover{
+    color: #b6ee1a;
 }

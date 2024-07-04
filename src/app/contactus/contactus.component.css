@@ -29,7 +29,7 @@
 
 .cu-general{
     width: 80vw;
-    margin-left: 3vw;
+    margin-left: 6vw;
     /* height: 75vh; */
     margin-top: 10vh;
     color:#177580;
@@ -197,16 +197,16 @@
     /* margin: 2vh 2.2vw;  */
 }
 
-.reagion{
+.region{
     width: 30vw;
     height: 8vh;
     margin: 2vh 2.1vw;
     display: inline-block;
     font-size: large;
     font-weight: lighter;
-}
+} 
 
-#Reagion{
+#Region{
     width: 30vw;
     height: 5vh;
     margin-top: 5px;
@@ -221,16 +221,12 @@
     font-weight: lighter;
 }
 
-.meassage h4{
-    margin-bottom: 5px;
+textarea{
+    width: 64.8vw;
+    height: 15vh;
+    margin: 2vh 0; 
+    outline: none;
 }
-
-/* #message{
-    
-    width: 6vw;
-    height: 10vh;
-    margin: 2vh 2.1vw; 
-} */
 
 .sub-btn{
     width: 65vw;

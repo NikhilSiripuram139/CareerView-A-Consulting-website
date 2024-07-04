@@ -1,24 +1,32 @@
 import { inject } from "@angular/core"
 import { AuthserviceService } from "./Services/authservice.service"
-import { Router } from "@angular/router";
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree } from "@angular/router";
 import { OptionsService } from "./Services/options.service";
+import { Observable, map, take } from "rxjs";
 
-export const CanActivate=()=>{
-    const authservice=inject(AuthserviceService);
-    const router=inject(Router);
+export const CanActivate=(
+    route: ActivatedRouteSnapshot, 
+    state: RouterStateSnapshot
+):boolean | UrlTree | Promise<boolean | UrlTree> | Observable<boolean | UrlTree>=>{
+    
+    const authservice = inject(AuthserviceService);
+    const router = inject(Router);
 
-    if(authservice.isauthenticated()){
-        // this.router.navigate(['/Sectordetails/:id']);
-        return true;
-    }else{
-        router.navigate(['/Login']);
-        return false;
-    }
+    return authservice.user.pipe(take(1), map((user)=>{
+        const isloged = user? true : false;
+        // console.log(isloged)
+        if(isloged){
+            return true;
+        }
+        else{
+            return router.createUrlTree(['/Login']);
+        }
+    }))
     
 }
 
-export const CanActivateChild=()=>{
-    return CanActivate();
+export const CanActivateChild=(route: ActivatedRouteSnapshot, state: RouterStateSnapshot)=>{
+    return CanActivate(route,state);
 }
 
 export const resolve=()=>{

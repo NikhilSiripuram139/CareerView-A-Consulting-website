@@ -1,7 +1,7 @@
 .header-container{
     width: 100vw;
     position:fixed;
-    z-index: 1px;
+    z-index: 500px;
     top: 0;
 }
 
@@ -47,6 +47,10 @@
     display: inline;
 }
 
+.sections nav ul li a:hover{
+    color: white;
+}
+
 .active{
     /* font-size:x-large ; */
     /* font-weight: bold; */
@@ -57,7 +61,7 @@
 
 .socialid nav ul{
     float: left;
-    margin-left: 43vw;
+    margin-left: 45vw;
     padding-top: 10px;
     color: black;
 
@@ -67,6 +71,11 @@
 .socialid nav ul li{
     list-style-type: none;
     display: inline;
+}
+
+.socialid nav ul li a i:hover{
+    /* color: white; */
+    transform: scale(1.2);
 }
 
 .topheader a{
@@ -95,6 +104,10 @@ i{
     /* padding-bottom: 20px; */
     margin-left: 20px;
     font-size:xx-large;
+}
+
+.logo:hover{
+    transform: scale(1.02);
 }
 
 .links nav ul{
@@ -128,19 +141,34 @@ i{
 
 .login{
     float: right;
-    padding-top: 20px;
-    margin-right: 20px;
+    /* padding-top: 20px; */
+    margin-right: 30px;
 }
 
+/* .login:hover{
+    background-color: #272727;
+    transform: scale(1.2);
+} */
+ 
 .login button{
-    width: 3vw;
-    height: 5vh;
-    margin-right: 20px;
+    width: 5vw;
+    height: 10vh;
+    /* margin-right: 20px; */
+    /* margin-left: 20px; */
     font-size: larger;
     color: white;
     background-color:rgb(0, 0, 28);
     border: none;
     cursor: pointer;
+}
+
+
+.login button:hover{
+    height: 9.1vh;
+    margin-top: 0.5vh;
+    background-color: #272727;
+    transform: scale(1.1);
+    /* width: ; */
 }
 
 #s1{

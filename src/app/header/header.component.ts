@@ -1,8 +1,9 @@
-import { Component, Inject, inject } from '@angular/core';
+import { Component, Inject, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { LogComponent } from './log/log.component';
 import { CommonModule } from '@angular/common';
 import { AuthserviceService } from '../Services/authservice.service';
+import { user } from '../Models/users';
 
 @Component({
   selector: 'app-header',
@@ -11,28 +12,24 @@ import { AuthserviceService } from '../Services/authservice.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
 
-
-
-  // logreceive(val: boolean){
-  //   this.showlog=val;
-  // }
-
-  // onlogclick(){
-  //   this.showlog=!this.showlog;
-  // }
+  isloged:boolean=false;
 
   authservice = inject(AuthserviceService);
 
-
-  // showlog: boolean;
-
-
-  // onlogoutclicked(){
-  //   this.showlog=!this.showlog;
-  // }
-
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.authservice.user.subscribe((user)=>{
+        const condition = user? true : false ;
+        this.isloged=condition;
+      })
+    }, 0);
+  }
   
+
+  onlogout(){
+    this.authservice.logout();
+  }
 
 }

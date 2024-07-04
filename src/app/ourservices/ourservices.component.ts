@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { OurservicesService } from '../Services/ourservices.service';
-import { service } from '../models/serviceee';
+import { service } from '../Models/serviceee';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,11 +12,15 @@ import { CommonModule } from '@angular/common';
 })
 export class OurservicesComponent implements OnInit{
 
-  serviceslist=inject(OurservicesService);
-  list:service[];
+  ourservices=inject(OurservicesService);
+  serviceslist:service[];
 
   ngOnInit(){
-    this.list=this.serviceslist.services2;
+    this.ourservices.onfetchservices().subscribe({
+      next: (list)=>{
+        this.serviceslist = list;
+      }
+    });
   }
 
 

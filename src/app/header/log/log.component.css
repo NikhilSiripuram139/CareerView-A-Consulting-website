@@ -37,6 +37,7 @@
     text-shadow: 3px 3px 10px gray;
 }
 
+
 #s1{
     font-size: 70px;
     font-weight: bolder;
@@ -58,13 +59,65 @@
     text-align: center;
     width: 25vw;
     height: 50vh;
-    /* background-color: rgb(0, 0, 28); */
     background-color: #6db1b9;
     box-shadow: 5px 5px 30px 2px #555151;
     border-radius: 2px;
 }
 
-#cancel{
+.login-form{
+    width: 25vw;
+    height: 50vh;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.cancel{
+ position: fixed;
+ top: 27vh;
+ right: 22vw;
+}
+
+.input-box{
+    color: #000000fc;
+    width: 80%;
+    margin: 2% 10% 1% 10%;
+}
+
+input{
+    width: 99%;
+    height: 4vh;
+    border-radius: 5px;
+    margin-top: 0.5vh;
+    border: 1px solid gray;
+}
+
+.login-form h2{
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    color: #000000fc;
+}
+
+.log-btn{
+    width: 80%;
+    height: 4vh;
+    margin: 2vh 10%;
+    margin-bottom: 5vh;
+    background-color: #222020fc;
+    border: #222020fc 1px solid;
+    font-size: large;
+    color: white;
+    border-radius: 4px;
+}
+
+
+.login-form a{
+    text-decoration: none;
+    color: black;
+    /* margin-top: 5vh; */
+}
+
+/* #cancel{
     float: right;
     margin-top: 5px;
     margin-right: 10px;
@@ -83,7 +136,6 @@
     width: 80%;
     height: 9%;
     margin: 2.5% 10%;
-    /* margin-top: 15%; */
     border: 1px solid white;
     border-radius: 2px;
 }
@@ -98,7 +150,6 @@
     font-size: large;
     font-weight: bold;
     color: white;
-    /* margin-top: 15%; */
     border-radius: 4px;
 }
 
@@ -111,7 +162,6 @@ hr{
 .login-box a{
     text-decoration: none;
     color: black;
-    /* margin-top: 5vh; */
 }
 
 #create-btn{
@@ -120,8 +170,7 @@ hr{
     margin: 2.5% 20%;
     background-color: #b6ee1a;
     border: #b6ee1a 1px solid;
-    /* font-weight: 20px; */
     font-size:medium;
     color: black;
     border-radius: 4px;
-}
+} */

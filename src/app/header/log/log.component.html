@@ -1,3 +1,6 @@
+<app-snackbar ></app-snackbar>
+
+
 <div class="log-container">
     <div class="log-main">
 
@@ -13,18 +16,47 @@
             </div>
         </div>
 
-        <div class="login-box"> 
-            <div>
-                <!-- <a routerLink="/Home" id="cancel"><i class="fa-solid fa-x"></i></a> -->
+
+        <form class="login-form" (ngSubmit)="onsubmit()" #loginform="ngForm">
+
+            <h2>{{loginmode? 'Login here' : 'Signup here'}}</h2>
+
+            <a class="cancel" (click)="oncancel()"><i class="fa-solid fa-xmark"></i></a>
+
+            <div class="input-box">
+                <label for="emailadd">Email:</label>
+                <input id="emailadd" type="text" placeholder="Email" name="email" ngModel required>
+            </div>
+
+            <div class="input-box">
+                <label for="pass">Password:</label>
+                <input id="pass" type="text" placeholder="Password" name="password" ngModel required>
+            </div>
+
+            <!-- <div class="input-box" *ngIf="!loginmode">
+                    <label for="password">Re-enter Password:</label>
+                    <input id="reentry" name="reentry" type="text" placeholder="Re-enter password" ngModel required>
+                </div> -->
+            <button [disabled]="!loginform.valid" type="submit" class="log-btn">{{loginmode? 'Log in' : 'Sign up'}}</button>
+
+            <div class="input-box">
+                <p>{{loginmode? 'Do not have account yet?' : 'Already have a account?'}} <a (click)="onchangemode()"
+                        style="color: #40f; cursor: pointer;">{{loginmode? 'Register Here' : 'Login Here'}}</a></p>
+            </div>
+
+        </form>
+
+        <!-- <div>
+                <a routerLink="/Home" id="cancel"><i class="fa-solid fa-x"></i></a>
             </div>
             <input id="username" type="text" placeholder="Username" #username>
             <input id="password" type="text" placeholder="password" #passward>
-            <button id="log-btn" (click)="loginclicked()">Log in</button>
+            <button id="log-btn" >Log in</button>
             <a href="">Forgotten password?</a>
             <hr>
 
-            <button id="create-btn">Create new account</button>
-        </div>
+            <button id="create-btn">Create new account</button> -->
+
 
     </div>
 </div>

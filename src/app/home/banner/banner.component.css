@@ -1,24 +1,22 @@
 .banner-container{
     width: 100vw;
     height: 80vh;
-    /* margin-top: 15vh; */
+    /* background-color: #fff; */
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: black;
-    /* background-image: url(../../../assets/bannerback.jpg); */
-    /* background-position:center;
-    background-size: cover;
-    background-image: url(../../../assets/bannerback1.jpg); */
+    justify-content: center;
 }
 
 .banner-main{
-    width: 50vw;
     height: 80vh;
+    margin: 0 10vw;
     padding-left: 2vw;
-    /* float: left; */
-    background-color: black;
-    display: inline-block;
+    /* background-color: black; */
+    /* margin-top: 15vh; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background-color: black; */
     /* margin: 0px; */
 }
 
@@ -87,7 +85,7 @@
 }
 
 .search-btn :hover{
-    font-size: 20px;
+    font-size: 18px;
 }
 
 i{

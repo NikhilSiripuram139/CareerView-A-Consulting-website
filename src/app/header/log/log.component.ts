@@ -1,6 +1,11 @@
 import { Component, ElementRef, EventEmitter, Injectable, OnInit, Output, ViewChild, inject, viewChild } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { AuthserviceService } from '../../Services/authservice.service';
+import { CommonModule } from '@angular/common';
+import { FormsModule, NgForm } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { AuthResponse } from '../../Models/AuthResponse';
+import { SnackbarComponent } from '../../utility/snackbar/snackbar.component';
 
 @Injectable({
   providedIn: 'root'
@@ -9,57 +14,53 @@ import { AuthserviceService } from '../../Services/authservice.service';
 @Component({
   selector: 'app-log',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule, FormsModule, SnackbarComponent],
   templateUrl: './log.component.html',
   styleUrl: './log.component.css'
 })
-export class LogComponent implements OnInit{
+export class LogComponent{
 
-  // onlogin(){
-  //   this.logging.emit(this.logged);
-  // }
+  loginmode:boolean=true;
+  errormessage : string | undefined;
   
-
-  @ViewChild('username') username:ElementRef;
-  @ViewChild('passward') passward:ElementRef;
-
   router=inject(Router);
+  authservices=inject(AuthserviceService);
+  @ViewChild('loginform') loginform : NgForm;
 
-  authservice=inject(AuthserviceService);
+  authobs: Observable<AuthResponse>;
 
-  activeroute=inject(ActivatedRoute);
+  onsubmit(){
+    const email = this.loginform.value.email;
+    const password = this.loginform.value.password;
 
-  ngOnInit(){
-    if(this.authservice.islogged){
-      this.activeroute.queryParamMap.subscribe((data)=>{
-        const logout=Boolean(data.get('logout'));
-        if(logout){
-          this.authservice.logout();
-          alert("You've logged out.");
-        }
-      })
+    if(this.loginmode){
+      this.authobs = this.authservices.login(email, password);
+    }else{
+      this.authobs = this.authservices.signup(email, password);
     }
-  }
-
-  loginfo:boolean;
-
-  loginclicked(){
-    const username = this.username.nativeElement.value;
-    const passward = this.passward.nativeElement.value;
-
-    const user = this.authservice.login(username, passward);
-
-    if(user===undefined){
-      alert("The login credentials you've entered are incorrect. Please check and try again.");
-    }
-    else{
-      alert("Welcom "+ user.name+". Your logged in.")
-      this.router.navigate(['/Home']);
-    }
-
-  }
-
-
   
+    this.authobs.subscribe({
+      next : (res)=>{
+        // console.log(res);
+        this.router.navigate(['/Home']);
+      }, error : (err)=>{
+        
+        this.authservices.errmsg.next(err)
+      }
+    })
+
+
+    this.loginform.reset();
+  }
+
+  oncancel(){
+    this.router.navigate(['/Home']);
+  }
+
+  onchangemode(){
+    this.loginmode=!this.loginmode;
+  }
+
+
 
 }

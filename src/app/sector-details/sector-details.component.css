@@ -1,5 +1,6 @@
 .sd-container{
     width: 100vw;
+    min-height: 50vh;
 }
 
 .sd-main{
@@ -36,7 +37,14 @@
 .sd-content-table ul li{
     margin: 2vh 0vw;
     font-size:large;
+    text-decoration: none;
     font-weight: lighter;
+}
+
+
+.sd-content-table ul li:hover{
+    transform: scale(1.1);
+    margin-left: .8vw;
 }
 
 .sd-content-table ul li a{
@@ -51,9 +59,15 @@
     margin-top: 20vh;
     color: white;
     overflow:scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     font-size:large;
     font-weight: lighter;
     padding:5vh 2vw 2vw 2vh;
+}
+
+.sd-info::-webkit-scrollbar{
+    display: none;
 }
 
 .sd-infohead{
@@ -173,4 +187,87 @@ ul{
     float: right;
     margin-top: 5vh;
     margin-right: 5vw;
+}
+
+#backhome:hover{
+    color: white;
+}
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    /* color: white; */
+}
+
+.center {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.ring {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    animation: ring 2s linear infinite;
+    /* background-color: black; */
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #177580;
+    }
+    
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #b6ee1a;
+    }
+    
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #177580;
+    }
+}
+
+
+.ring::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+
+span {
+    /* margin-left: 10px; */
+    /* padding-left: 10px; */
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: black;
+    border-radius: 50%;
+    color: gray;
+    font-size: medium;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 120px;
+    animation: text 2s ease-in-out infinite;
+}
+
+@keyframes text {
+    50% {
+        color: transparent;
+    }
 }

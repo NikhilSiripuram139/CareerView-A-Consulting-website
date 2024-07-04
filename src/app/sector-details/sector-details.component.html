@@ -1,29 +1,36 @@
+<div class="loader" *ngIf="!showdetails">
+    <div class="center">
+      <div class="ring">
+      </div>
+      <span>Loading...</span>
+    </div>
+</div> 
 <div class="sd-container">
-    <div class="sd-main">
-        <div class="sd-content-table">
+    <div class="sd-main" *ngIf="showdetails">
+        <div class="sd-content-table" >
             <div class="ct-head">
                 <p>Content</p>
             </div>
-
+ 
             <ul>
-                <li><a [routerLink]="'/Sectordetails/'+sectorid" fragment="what">What Is Marketing?</a></li>
-                <li><a [routerLink]="'/Sectordetails/'+sectorid" fragment="Understand">Understanding Marketing</a></li>
-                <li><a [routerLink]="'/Sectordetails/'+sectorid" fragment="Types">Types of Marketing Strategies</a></li>
-                <li><a [routerLink]="'/Sectordetails/'+sectorid" fragment="Benefits">Benefits</a></li>
-                <li><a [routerLink]="'/Sectordetails/'+sectorid" fragment="Limitations">Limitations</a></li>
-                <li><a [routerLink]="'/Sectordetails/'+sectorid" fragment="Bottom">The Bottom Line</a></li>
+                <li><a [routerLink]="'/Careers/Sectordetails/'+sectorid" fragment="what">What is {{selectedsector.name}}?</a></li>
+                <li><a [routerLink]="'/Careers/Sectordetails/'+sectorid" fragment="Understand">Understanding {{selectedsector.name}}?</a></li>
+                <li><a [routerLink]="'/Careers/Sectordetails/'+sectorid" fragment="Types">Strategies</a></li>
+                <li><a [routerLink]="'/Careers/Sectordetails/'+sectorid" fragment="Benefits">Benefits</a></li>
+                <li><a [routerLink]="'/Careers/Sectordetails/'+sectorid" fragment="Limitations">Limitations</a></li>
+                <li><a [routerLink]="'/Careers/Sectordetails/'+sectorid" fragment="Bottom">The Bottom Line</a></li>
             </ul>
 
         </div>
 
         <div class="sd-info">
             <div class="sd-infohead">
-                <p>{{selectedsector.name}}</p>
+                <p>{{selectedsector.name}}?</p>
             </div>
 
             <div class="sd-infodes">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni expedita culpa voluptatum porro quam fugiat nostrum saepe dignissimos nemo perspiciatis! Facere exercitationem commodi numquam est ab natus. Eum dolore unde, laudantium culpa temporibus reiciendis quidem corporis est doloremque amet sapiente odio deleniti! Nisi, veritatis. Voluptatem, accusantium similique. Voluptatibus harum nam maiores, ab amet eum?</p>
-                <img src="{{selectedsector.image1}}" alt="img">
+                <img src="{{selectedsector.image1}}?" alt="img">
             </div>
 
             <section id="what">
@@ -52,7 +59,7 @@
             <section id="Understand">
                 <div class="Understand">
                     <div class="Understand-head">
-                        <p>Understanding {{selectedsector.name}}</p>
+                        <p>Understanding {{selectedsector.name}}?</p>
                     </div>
     
                     <div class="Understand-des">
@@ -60,7 +67,7 @@
     
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi quia consectetur quibusdam autem neque sed, distinctio placeat blanditiis assumenda accusantium velit doloremque ratione aut repudiandae fuga saepe cupiditate corporis fugiat tempora. Fugiat animi, repellendus odit officiis necessitatibus incidunt illum saepe ipsam consectetur exercitationem quibusdam, neque tempore dicta?</p>
     
-                        <img src="{{selectedsector.image2}}" alt="img">
+                        <img src="{{selectedsector.image2}}?" alt="img">
     
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem consequuntur quae distinctio tempore quod doloribus repudiandae velit dignissimos dolore non blanditiis ea inventore temporibus autem architecto quam dolor, ipsum officiis adipisci nisi illo quidem a eum asperiores? Iste quisquam quam recusandae nemo dolorem. Veniam quasi, suscipit a quo odio recusandae repudiandae molestias atque. At illum suscipit cum, minima velit optio neque unde repellendus voluptates laboriosam, sunt et quis modi enim impedit? Nisi iure consequuntur officiis? Saepe repellat qui, nulla nam assumenda ipsa enim ut ratione magnam nihil quas doloribus?</p>
     
@@ -73,7 +80,7 @@
             <section id="Types">
                 <div class="Types">
                     <div class="Types-head">
-                        <p>{{selectedsector.name}} and Strategies</p>
+                        <p>{{selectedsector.name}}? and Strategies</p>
                     </div>
     
                     <div class="Types-des">

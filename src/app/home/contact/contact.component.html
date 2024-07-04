@@ -4,35 +4,37 @@
             <p>Thank you for your interest towards CreerView, you can find the best way to contact us below.</p>
         </div>
 
-        <div class="contact-details">
+ 
+        <form class="contact-details" (ngSubmit)="onsubmit()" #contactusform="ngForm">
             <div class="divider">
                 <div class="name">
                     <h4>Name</h4>
-                    <input id="name" type="text" placeholder="Name">
+                    <input id="name" type="text" placeholder="Name" name="name" ngModel required>
                 </div>
                 <div class="email">
                     <h4>Email</h4>
-                    <input id="email" type="text" placeholder="Email">
+                    <input id="email" type="text" placeholder="Email" name="email" ngModel required>
                 </div>
                 <div class="contact">
                     <h4>Contact</h4>
-                    <input id="contact" type="text" placeholder="Contact">
+                    <input id="contact" type="tel" placeholder="Contact" name="contactno" ngModel required>
                 </div>
-                <div class="reagion">
+                <div class="region">
                     <h4>Reagion</h4>
-                    <select aria-label="Reagion" id="Reagion">
+                    <select aria-label="Region" id="Region" name="region" ngModel required>
                         <option value="Hyderabad">Hyderabad</option>
                         <option value="Chennai">Chennai</option>
                         <option value="pune">pune</option>
                         <option value="Bangalore">Bangalore</option>
                     </select>
                 </div>
-                <div class="meassage">
+                <div class="meassage"> 
                     <h4>Message</h4>
-                    <textarea id="meassage" cols="139" rows="8" placeholder="Message"></textarea>
+                    <!-- <input type="textarea" id="meassage" cols="139" rows="8" placeholder="Message"> -->
+                    <textarea id="meassage" placeholder="Message" name="message" ngModel required></textarea>
                 </div>
-                <button class="sub-btn">Submit</button>
+                <button class="sub-btn" type="submit">Submit</button>
             </div>
-        </div>
+        </form>
     </div>
 </div>

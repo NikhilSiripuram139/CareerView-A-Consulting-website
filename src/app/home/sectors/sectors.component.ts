@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { OptionsService } from '../../Services/options.service';
-import { option } from '../../models/careeroptions';
+import { option } from '../../Models/careeroptions';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
@@ -13,13 +13,18 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class SectorsComponent implements OnInit{
 
-  careeroptions=inject(OptionsService);
+  optionsservice=inject(OptionsService);
   router=inject(Router);
 
   careers:option[]=[];
 
   ngOnInit(){
-    this.careers=this.careeroptions.options;
+    
+    this.optionsservice.onfetchsectors().subscribe({
+      next: (list)=>{
+        this.careers = list.slice(0,6);
+      }
+    })
   }
 
   

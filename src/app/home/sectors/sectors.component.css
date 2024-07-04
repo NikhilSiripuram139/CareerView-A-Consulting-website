@@ -7,6 +7,7 @@
 
 .sectors-main{
     width: 90vw;
+    margin: 0 5vw;
 }
 
 .sector-heading{
@@ -24,16 +25,18 @@
     justify-content: center;
     align-items: center;
     margin: 5vh 5vw;
+    padding-left: 1.5vw;
 }
 
 .divider{
     width: 90vw;
     height: 50vh;
+    margin: 0 6vw;
     /* margin: 10vh 10vw; */
 }
- 
+  
 .sector{
-    width: 24vw;
+    width: 21vw;
     height: 29vh;
     margin: 1vh .5vw;
     cursor: pointer;
@@ -47,9 +50,9 @@
 }
 
 .sector:hover{
-    width: 26vw;
+    width: 22vw;
     /* height: 31vh; */
-    margin: 0vh -.5vw;
+    margin: 0vh 0vw;
     box-shadow: 1px 3px 10px rgb(86, 85, 85);
 }
 
@@ -64,6 +67,10 @@
 a{
     float: right;
     /* margin-left: 62vw; */
-    color: #b6ee1a;
+    color: #177580;
     text-decoration: none;
+}
+
+a:hover{
+    color: #b6ee1a;
 }

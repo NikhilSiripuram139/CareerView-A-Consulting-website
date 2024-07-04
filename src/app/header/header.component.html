@@ -1,7 +1,7 @@
 <div class="header-container">
     <div class="topheader">
         <div class="socialid">
-            <nav>
+            <nav> 
                 <ul>
                     <li><a href="https://www.facebook.com/" target="main"><i class="fa-brands fa-facebook"></i></a></li>
                     <li><a href="https://twitter.com/?lang=en" target="main"><i class="fa-brands fa-twitter"></i></a></li>
@@ -42,12 +42,12 @@
             </nav>
         </div>
 
-        <div class="login" >
-            <div *ngIf="!authservice.isauthenticated()" >
+        <div class="login" > 
+            <div *ngIf="!isloged" >
                 <button  routerLink="/Login" >Login</button>
             </div>
-            <div *ngIf="authservice.isauthenticated()">
-                <button  routerLink="/Login" [queryParams]="{logout:true}">Logout</button>
+            <div *ngIf="isloged">
+                <button (click)="onlogout()"  routerLink="/Login" [queryParams]="{logout:true}">Logout</button>
             </div>
         </div>
 

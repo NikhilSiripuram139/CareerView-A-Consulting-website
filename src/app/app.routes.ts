@@ -1,34 +1,55 @@
-import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-// import { ServiceComponent } from './home/service/service.component';
-import { ContactusComponent } from './contactus/contactus.component';
-import { NotfoundComponent } from './notfound/notfound.component';
-import { OurservicesComponent } from './ourservices/ourservices.component';
+import { PreloadAllModules, PreloadingStrategy, Routes } from '@angular/router';
 import { LogComponent } from './header/log/log.component';
-import { CareerSectorsComponent } from './career-sectors/career-sectors.component';
-import { PrivacyNoteComponent } from './privacy-note/privacy-note.component';
-import { TremConditionsComponent } from './trem-conditions/trem-conditions.component';
-import { CookiesPsComponent } from './cookies-ps/cookies-ps.component';
-import { AccessStatementComponent } from './access-statement/access-statement.component';
-import { SectorDetailsComponent } from './sector-details/sector-details.component';
-import { AuthguardserviceService } from './Services/authguardservice.service';
-import { CanActivate, CanActivateChild, resolve } from './authguard';
+import { CanActivate, resolve} from './authguard';
+import { HomeComponent } from './home/home.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ContactComponent } from './home/contact/contact.component';
+
 
 export const routes: Routes = [
-    { path:'', component: HomeComponent},
-    { path:'Home', component: HomeComponent},
-    { path:'About', component: AboutComponent},
-    { path:'Services', component: OurservicesComponent},
-    { path:'Contact us', component: ContactusComponent, canDeactivate: [(comp: ContactusComponent)=>{comp.canExit()}]},
-    { path:'Careers', component: CareerSectorsComponent, resolve:{options:resolve}},
-    { path:'Careers', canActivateChild:[CanActivateChild], children: [
-        { path:'Sectordetails/:id', component: SectorDetailsComponent}
-    ]},
+    { path:'',
+        component: HomeComponent, 
+        canActivate: [CanActivate]},
+    { path:'Home', 
+        canActivate: [CanActivate], 
+        loadComponent : ()=>import('./home/home.component').then(c=>c.HomeComponent),
+    },
     { path:'Login', component: LogComponent},
-    { path:'Privacy', component: PrivacyNoteComponent},
-    { path:'Terms', component: TremConditionsComponent},
-    { path:'Cookies', component: CookiesPsComponent},
-    { path:'Access', component: AccessStatementComponent},
-    { path:'**', component: NotfoundComponent},
+    { path:'About', 
+        canActivate: [CanActivate],
+        loadComponent : ()=>import('./about/about.component').then(c=>c.AboutComponent)
+    },
+    { path:'Services',
+        canActivate: [CanActivate],
+        loadComponent : ()=>import('./ourservices/ourservices.component').then(c=>c.OurservicesComponent)
+    },
+    { path:'Contact us',
+        canActivate: [CanActivate],
+        canDeactivate: [(comp:ContactusComponent)=>{return comp.canExit()}],
+        loadComponent : ()=>import('./contactus/contactus.component').then(c=>c.ContactusComponent)
+    },
+    { path:'Careers',
+        canActivate: [CanActivate], 
+        resolve:{options:resolve}, 
+        loadChildren : () => import('./career-sectors/career.routes').then(m=>m.CAREERS_ROUTES)
+    }, 
+    { path:'Privacy',
+        canActivate: [CanActivate],
+        loadComponent : ()=>import('./privacy-note/privacy-note.component').then(c=>c.PrivacyNoteComponent)
+    },
+    { path:'Terms',
+        canActivate: [CanActivate],
+        loadComponent : ()=>import('./trem-conditions/trem-conditions.component').then(c=>c.TremConditionsComponent)
+    },
+    { path:'Cookies',
+        canActivate: [CanActivate],
+        loadComponent : ()=>import('./cookies-ps/cookies-ps.component').then(c=>c.CookiesPsComponent)
+    },
+    { path:'Access',
+        canActivate: [CanActivate],
+        loadComponent : ()=>import('./access-statement/access-statement.component').then(c=>c.AccessStatementComponent)
+    },
+    { path:'**',
+        loadComponent : ()=>import('./notfound/notfound.component').then(c=>c.NotfoundComponent)
+    },
 ];

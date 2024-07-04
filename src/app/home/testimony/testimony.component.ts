@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ClientsService } from '../../Services/clients.service';
-import { client } from '../../models/clients';
-import { CommonModule } from '@angular/common';
+import { client } from '../../Models/clients';
+import { AsyncPipe, CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-testimony',
@@ -12,12 +12,19 @@ import { CommonModule } from '@angular/common';
 })
 export class TestimonyComponent implements OnInit{
 
-  clientreview=inject(ClientsService);
+  clientservice=inject(ClientsService);
 
   clients:client[];
+  // showreviews:boolean=false;
 
 ngOnInit(){
-    this.clients=this.clientreview.clients;
+  this.clientservice.onfetchreviews()
+  .subscribe({
+    next: (list)=>{
+      this.clients = list;
+    }
+  });
+  
 }
 
 }
