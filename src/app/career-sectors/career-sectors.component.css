@@ -13,6 +13,8 @@
     color: #177580;
     font-size: 50px;
     font-weight: bold;
+    opacity: 0;
+    animation: heading-fadein linear .8s forwards;
 }
 
 .section1{
@@ -27,6 +29,8 @@
     margin-left: 3vw;
     font-size: x-large;
     font-weight: bold;
+    opacity: 0;
+    animation: heading-fadein linear .8s forwards;
 }
 
 .section1-des{
@@ -39,6 +43,8 @@
     /* display: block;    */
     font-size: large;
     font-weight:lighter;
+    opacity: 0;
+    animation: heading-fadein linear .8s forwards;
 }
 
 .section1-des p{
@@ -51,6 +57,13 @@
     width: 70vw;
     margin:5vh 5vw;
     /* background-color: #177580; */
+}
+
+.sector{
+    scale: .9; opacity: 0.2;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 250px;
 }
 
 .name{
@@ -84,9 +97,32 @@
     font-weight: lighter;
     float: right;
 }
-
+ 
 #backhome:hover{
     color: white;
 }
 
+@keyframes heading-fadein {
+    to { opacity: 1;}
+}
 
+@keyframes fadein {
+    to { scale: 1; opacity: 1;}    
+}
+
+@media (max-width:740px){
+    .cs-heading{
+        font-size:40px;
+    }
+}
+
+@media (max-width:1155px){
+    #backhome{
+        width: 15vw;
+    }
+}
+@media (max-width:770px){
+    #backhome{
+        width: 24vw;
+    }
+}

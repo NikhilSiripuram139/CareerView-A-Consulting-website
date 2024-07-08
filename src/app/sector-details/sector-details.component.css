@@ -23,10 +23,13 @@
 }
 
 .ct-head{
-    /* padding-top: 25vh; */
+    position: absolute;
+    top: 16vh;
     font-size:xx-large;
     font-weight: bold;
     color: #177580;
+    opacity: 0;
+    animation: heading-fadein linear .7s forwards;
 }
 
 .sd-content-table ul{
@@ -37,8 +40,11 @@
 .sd-content-table ul li{
     margin: 2vh 0vw;
     font-size:large;
+    /* list-style-type: none; */
     text-decoration: none;
     font-weight: lighter;
+    opacity: 0;
+    animation: heading-fadein linear .8s forwards;
 }
 
 
@@ -76,15 +82,21 @@
     font-weight: bold;
     color: #177580;
     margin-bottom: 10vh;
+    opacity: 0;
+    animation: heading-fadein linear .7s forwards;
 }
 
 .sd-infodes{
     margin: 5vh 0vw 5vh 2vw;
+    opacity: 0;
+    animation: heading-fadein linear .8s forwards;
 }
 
 .sd-infodes img{
     margin: 5vh 20.5vw;
     width: 25vw;
+    opacity: 0;
+    animation: heading-fadein linear .9s forwards;
 }
 
 .what-head{
@@ -93,6 +105,10 @@
     font-weight: bold;
     color: #177580;
     margin-bottom: 10vh;
+    scale: .9; opacity: 0.2;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 250px;
 }
 
 .what-des{
@@ -101,10 +117,18 @@
 
 p{
     margin: 5vh 0vw;
+    scale: .9; opacity: 0.2;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 250px;
 }
 
 ul{
     margin-left: 3vw;
+    scale: .9; opacity: 0.2;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 250px;
 }
 
 .Understand-head{
@@ -125,7 +149,10 @@ ul{
     shape-outside: url(../../assets/Md2.jpg);
     margin-right: 2vw;
     shape-margin: 2vh;
-    
+    scale: .9; opacity: 0.2;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 150px 400px;
 }
 
 .Types-head{
@@ -174,7 +201,7 @@ ul{
 }
 
 .Bottom-Line-des{
-    margin: 5vh 0vw 5vh 2vw;
+    margin: 5vh 0vw 20vh 2vw;
 }
 
 #backhome{
@@ -269,5 +296,74 @@ span {
 @keyframes text {
     50% {
         color: transparent;
+    }
+}
+
+@keyframes heading-fadein {
+    to { opacity: 1;}
+}
+
+@keyframes fadein {
+    to { scale: 1; opacity: 1;}    
+}
+
+@media (max-width:1155px){
+    #backhome{
+        width: 15vw;
+    }
+}
+@media (max-width:770px){
+    #backhome{
+        width: 24vw;
+    }
+}
+/* @media (max-width:1155px){
+    #backhome{
+        width: 15vw;
+    }
+} */
+
+@media (max-width:740px){
+    .sd-infohead{
+        font-size:30px;
+    }
+    .sd-infodes{
+        font-size: medium;
+    }
+    .what-head{
+        font-size:30px;
+    }
+    .what-des{
+        font-size: medium;
+    }
+    .Understand-head{
+        font-size:30px;
+    }
+    .Understand-des{
+        font-size: medium;
+    }
+    .Types-head{
+        font-size:30px;
+    }
+    .Types-des{
+        font-size: medium;
+    }
+    .Benefits-head{
+        font-size:30px;
+    }
+    .Benefits-des{
+        font-size: medium;
+    }
+    .Limitations-head{
+        font-size:30px;
+    }
+    .Limitations-des{
+        font-size: medium;
+    }
+    .Bottom-Line-head{
+        font-size:30px;
+    }
+    .Bottom-Line-des{
+        font-size: medium;
     }
 }

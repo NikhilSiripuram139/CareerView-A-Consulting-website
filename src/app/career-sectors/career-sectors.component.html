@@ -1,9 +1,16 @@
+<div class="loader" *ngIf="!showdetails">
+    <div class="center">
+      <div class="ring">
+      </div>
+      <span>Loading...</span>
+    </div>
+</div> 
 <div class="cs-container">
     <div class="cs-main">
         <div class="cs-heading">
             <p>Career Options</p>
         </div>
- 
+  
         <div class="section1">
             <div class="section1-head">
                 <p>We serve what you deserve</p>
@@ -19,7 +26,7 @@
         <div class="sectors-list">
             <div class="divider">
                 <div class="sector" *ngFor="let x of careers">
-                    <div class="name" style="background-image: url({{x.image}});" [routerLink]="'Sectordetails/'+x.id">
+                    <div class="name"  style="background-image: url({{x.image}});" [routerLink]="'Sectordetails/'+x.id">
                         <P>{{x.name}}</P>
                     </div>
                 </div>

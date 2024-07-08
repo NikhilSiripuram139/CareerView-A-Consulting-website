@@ -1,5 +1,5 @@
 .about-container{
-    width: 100vw;
+    width: 100vw; 
     /* height: 100vh; */
 }
 
@@ -14,11 +14,14 @@
     color: #177580;
     font-size: 50px;
     font-weight: bold;
+    opacity: 0;
+    animation: heading-fadein linear 1s forwards;
 }
 
+
 .section1{
-    width: 80vw;
-    height: 75vh;
+    /* width: 80vw; */
+    min-height: 75vh;
     margin-top: 10vh;
     color: white;
     display: block;
@@ -29,28 +32,37 @@
     height: 40vh;
     float: right;
     margin-top: 10vh;
+    opacity: 0;
+    transform: translateX(20vw);
+    animation: section1-fadein linear .6s forwards;   
 }
 
 .s1-head{
     padding-top: 10vh;
     color: #177580;
     display: inline-block;
-    font-size: 50px;
-    /* font-weight:500px; */
+    font-size: 40px;
+    opacity: 0;
+    transform: translateX(-30vw);
+    animation: section1-fadein linear .7s forwards;
 }
 
+
 .s1-des{
-    margin-left: 5vw;
+    /* margin-left: 5vw; */
     padding-top: 5vh;
     display: inline-block;
     width: 45%;
     font-size: large;
     font-weight: lighter;
+    opacity: 0;
+    transform: translateX(-30vw);
+    animation: section1-fadein linear .6s forwards;
 }
 
 .section2{
-    width: 80vw;
-    height: 75vh;
+    /* width: 80vw; */
+    min-height: 75vh;
     color: white;
     display: inline-block;
     /* float: right;
@@ -62,15 +74,24 @@
     width: 30vw;
     height: 40vh;
     float: left;
+    opacity: 0;
+    scale: .7;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 500px;
 }
 
 .s2-head{
     padding-top: 10vh;
-    margin-right: 20vw;
+    margin-right: 22vw;
     float: right;
     color: #177580;
-    font-size: 50px;
-    /* font-weight: bold; */
+    font-size: 40px;
+    opacity: 0;
+    scale: .7;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
 }
 
 .s2-des{
@@ -80,11 +101,16 @@
     float: right;
     font-size: large;
     font-weight: lighter;
+    opacity: 0;
+    scale: .8;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
 }
 
 .section3{
-    width: 80vw;
-    height: 75vh;
+    /* width: 80vw; */
+    min-height: 75vh;
     color: white;
     display: block;
     display: block;
@@ -95,27 +121,42 @@
     height: 40vh;
     float: right;
     margin-top: 10vh;
+    opacity: 0;
+    scale: .7;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 400px;
 }
 
 .s3-head{
+    float: left;
     padding-top: 10vh;
     color: #177580;
-    font-size: 50px;
-    /* font-weight: bold; */
+    font-size: 40px;
+    opacity: 0;
+    scale: .7;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
 }
 
 .s3-des{
-    margin-left: 5vw;
+    /* margin-left: 5vw; */
     padding-top: 5vh;
     width: 45%;
     display: inline-block;
     font-size: large;
     font-weight: lighter;
+    opacity: 0;
+    scale: .8;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
 }
 
 .section4{
-    width: 80vw;
-    height: 75vh;
+    /* width: 80vw; */
+    min-height: 75vh;
     color: white;
     display: block;
 }
@@ -125,6 +166,11 @@
     width: 30vw;
     height: 40vh;
     float: left;
+    opacity: 0;
+    scale: .7;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 400px;
 }
 
 .s4-head{
@@ -132,22 +178,31 @@
     margin-right: 25vw;
     float: right;
     color: #177580;
-    font-size: 50px;
-    /* font-weight: bold; */
+    font-size: 40px;
+    opacity: 0;
+    scale: .7;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
 }
 
 .s4-des{
-    margin-left: 5vw;
+    /* margin-left: 5vw; */
     padding-top: 5vh;
     width: 45%;
     float: right;
     font-size: large;
     font-weight: lighter;
+    opacity: 0;
+    scale: .8;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
 }
 
 .section5{
-    width: 80vw;
-    height: 75vh;
+    /* width: 80vw; */
+    min-height: 75vh;
     color: white;
     display: block;
 }
@@ -157,20 +212,168 @@
     height: 40vh;
     float: right;
     margin-top: 10vh;
+    opacity: 0;
+    scale: .7;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 400px;
+
 }
 
 .s5-head{
+    float: left;
     padding-top: 10vh;
     color: #177580;
-    font-size: 50px;
-    /* font-weight: bold; */
+    font-size: 40px;
+    opacity: 0;
+    scale: .7;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
 }
 
 .s5-des{
-    margin-left: 5vw;
+    /* margin-left: 5vw; */
     padding-top: 5vh;
     width: 45%;
     display: inline-block;
     font-size: large;
     font-weight: lighter;
+    opacity: 0;
+    scale: .8;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
+}
+
+@keyframes section1-fadein {
+    to { transform: translateX(0); opacity: 1;}
+}
+
+@keyframes section-fadein {
+    to { scale: 1; opacity: 1;}
+}
+
+@keyframes heading-fadein {
+    to { opacity: 1;}
+}
+
+@media (max-width:1220px){
+    .s1-head{
+        font-size: 30px; 
+    }
+    .s1-des{
+        font-size: 15px;
+    }
+    .s2-head{
+        font-size: 30px;
+    }
+    .s2-des{
+        font-size: 15px;
+    }
+    .s3-head{
+        font-size: 30px;
+    }
+    .s3-des{
+        font-size: 15px;
+    }
+    .s4-head{
+        font-size: 30px;
+    }
+    .s4-des{
+        font-size: 15px;
+    }
+    .s5-head{
+        font-size: 30px;
+    }
+    .s5-des{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:900px){
+    .s2-head{
+        margin-right: 17vw;
+    }
+}
+
+@media (max-width:750px){
+    .s1-head{
+        font-size: 25px; 
+    }
+    .s1-des{
+        font-size: 15px;
+    }
+    .s2-head{
+        font-size: 25px;
+        margin-right: 18vw;
+    }
+    .s2-des{
+        font-size: 15px;
+    }
+    .s3-head{
+        font-size: 25px;
+    }
+    .s3-des{
+        font-size: 15px;
+    }
+    .s4-head{
+        font-size: 25px;
+        margin-right: 20vw;
+    }
+    .s4-des{
+        font-size: 15px;
+    }
+    .s5-head{
+        font-size: 25px;
+    }
+    .s5-des{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:610px){
+    .s1-head{
+        font-size: 23px; 
+    }
+    .s2-head{
+        font-size: 25px;
+        margin-right: 15vw;
+    }
+}
+@media (max-width:562px){
+    .s1-head{
+        font-size: 20px; 
+    }
+    .s2-head{
+        font-size: 23px;
+        margin-right: 13vw;
+    }
+    .s4-head{
+        font-size: 23px;
+        margin-right: 18vw;
+    }
+}
+@media (max-width:490px){
+    .s1-head{
+        font-size: 18px; 
+    }
+    .s2-head{
+        font-size: 23px;
+        margin-right: 10vw;
+    }
+    .s4-head{
+        font-size: 23px;
+        margin-right: 18vw;
+    }
+}
+
+@media (max-width:740px){
+    .about-heading{
+        font-size:40px;
+    }
+
+    .maintag{
+        font-size: 30px;
+    }
 }

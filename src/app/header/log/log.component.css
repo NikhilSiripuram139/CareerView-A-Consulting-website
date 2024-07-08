@@ -1,10 +1,11 @@
 .log-container{
     width: 100vw;
     height: 100vh;
-    z-index: 30px;
+    z-index: 100;
     color: white;
     position: fixed;
     top: 0;
+    /* background: linear-gradient( to bottom right, rgb(0, 0, 28), #15482f) ; */
     background-color: black;
 }
 
@@ -18,6 +19,9 @@
 }
 
 .log-head{
+    position: absolute;
+    top: 40vh;
+    left: 10vw;
     margin-right:10vw ;
     font-size: large;
     font-weight: bold;
@@ -55,26 +59,31 @@
     font-weight: bold;
 }
 
-.login-box{
-    text-align: center;
+
+/* .login-box{
+    text-align: center; 
     width: 25vw;
     height: 50vh;
     background-color: #6db1b9;
     box-shadow: 5px 5px 30px 2px #555151;
     border-radius: 2px;
-}
+} */
 
 .login-form{
+    position: absolute;
+    top: 25vh;
+    right: 20vw;
+    display: inline-block;
     width: 25vw;
-    height: 50vh;
+    min-height: 50vh;
     background-color: white;
     border-radius: 2px;
 }
 
 .cancel{
- position: fixed;
- top: 27vh;
- right: 22vw;
+ position: absolute;
+ top: 2vh;
+ right: 2vw;
 }
 
 .input-box{
@@ -117,60 +126,27 @@ input{
     /* margin-top: 5vh; */
 }
 
-/* #cancel{
-    float: right;
-    margin-top: 5px;
-    margin-right: 10px;
+
+
+@media (max-width:800px){
+    .log-head{
+        top: 10vh;
+        left: 28vw;
+    }
+    .login-form{
+        width: 45vw;
+        top: 40vh;
+        right: 25vw;
+    }
 }
 
-#username{
-    width: 80%;
-    height: 9%;
-    margin: 2.5% 10%;
-    margin-top: 12%;
-    border: 1px solid white;
-    border-radius: 2px;
+@media (max-width:600px){
+    .log-head{
+        left: 25vw;
+    }
 }
-
-#password{
-    width: 80%;
-    height: 9%;
-    margin: 2.5% 10%;
-    border: 1px solid white;
-    border-radius: 2px;
+@media (max-width:450px){
+    .log-head{
+        left: 20vw;
+    }
 }
-
-#log-btn{
-    width: 80%;
-    height: 9%;
-    margin: 2.5% 10%;
-    margin-bottom: 5vh;
-    background-color: #177580;
-    border: #177580 1px solid;
-    font-size: large;
-    font-weight: bold;
-    color: white;
-    border-radius: 4px;
-}
-
-hr{
-    width: 20vw;
-    margin: 3vh 2.5vw ;
-    border: 1px solid rgb(0, 0, 0);
-}
-
-.login-box a{
-    text-decoration: none;
-    color: black;
-}
-
-#create-btn{
-    width: 60%;
-    height: 9%;
-    margin: 2.5% 20%;
-    background-color: #b6ee1a;
-    border: #b6ee1a 1px solid;
-    font-size:medium;
-    color: black;
-    border-radius: 4px;
-} */

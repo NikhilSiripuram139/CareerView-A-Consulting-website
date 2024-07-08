@@ -1,58 +1,75 @@
 .sectors-container{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-
+ 
 .sectors-main{
-    width: 90vw;
-    margin: 0 5vw;
+    width: 80vw;
+    margin: 0 10vw;
 }
 
 .sector-heading{
     color: #177580;
-    padding-top: 15vh;
-    /* padding-top: 70px; */
+    padding-bottom: 7vh;
+    padding-top: 2vh;
     /* height: 30vh; */
     font-size: 50px;
     font-weight: bold;
     text-align: center;
+    scale: .8; opacity: 0;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 500px;
 } 
 
-.sectors-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5vh 5vw;
-    padding-left: 1.5vw;
+@keyframes fadein {
+    to { scale: 1; opacity: 1;}    
 }
 
-.divider{
-    width: 90vw;
-    height: 50vh;
-    margin: 0 6vw;
-    /* margin: 10vh 10vw; */
+
+.sectors-box{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
 }
+
+/* .divider{
+    width: 90vw;
+    min-height: 50vh;
+    margin: 0 6vw;
+} */
   
 .sector{
-    width: 21vw;
-    height: 29vh;
-    margin: 1vh .5vw;
+    /* width: 21vw; */
+    /* min-height: 29vh; */
+    /* margin: 1vh .5vw; */
     cursor: pointer;
-    display: inline-block;
+    /* display: inline-block; */
     background-color: white;
     background-size: cover;
     background-position: center;
-    /* opacity: 0.7; */
+    scale: .8; opacity: 0.2;
     color: black;
     border: 1px solid black;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 250px;
+}
+
+.sectors-box a{
+    opacity: 0.2;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 160px;
 }
 
 .sector:hover{
-    width: 22vw;
-    /* height: 31vh; */
     margin: 0vh 0vw;
+    transform: scale(1.02);
     box-shadow: 1px 3px 10px rgb(86, 85, 85);
 }
 
@@ -74,3 +91,16 @@ a{
 a:hover{
     color: #b6ee1a;
 }
+
+@media (max-width:740px) {
+
+    .sector-heading{
+        font-size:xx-large;
+    }
+
+    .name{
+        font-size:x-large;
+    }
+
+}
+

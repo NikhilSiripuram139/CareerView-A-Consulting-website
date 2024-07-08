@@ -1,6 +1,6 @@
 .service-container{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,13 +21,16 @@
     font-weight: bold;
     margin-left: 30px;
     margin-bottom: 50px;
-    /* text-align: center; */
+    scale: .8; opacity: 0;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 500px;
 }
 
 .services{
     /* cursor: pointer; */
     width: 75vw;
-    height: 10vh;
+    min-height: 10vh;
     margin: 1vh 2.5vw;
     padding: 5vh 0vw;
     /* background-color: #013442; */
@@ -35,6 +38,17 @@
     justify-content: center;
     align-items: center;
     font-size:large;
+    scale: .9; opacity: 0.2;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 250px;
+}
+
+.service-main a{
+    opacity: 0.2;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 80px 140px;
 }
 
 .services:hover{
@@ -43,18 +57,22 @@
 }
 
 .service-name{
+    position: absolute;
     width: 14vw;
-    height: 10vh;
+    top: 2.5vh;
+    left: 0;
+    text-align: center;
+    min-height: 10vh;
     padding-top: 6vh;
     display: inline-block;
     /* background-color: black; */
     color: white;
     border-right: 3px solid black;
 }
-
+ 
 .service-description{
     width: 40vw;
-    height: 15vh;
+    min-height: 15vh;
     /* padding-top: 6vh; */
     /* margin-top: 2vh; */
     display: inline-block;
@@ -71,7 +89,10 @@
 
 .service-btn{
     width: 5vw;
-    display: inline-block;
+    position: absolute;
+    top:5vh;
+    right: 10vw;
+    /* display: inline-block;S */
     background-color: none;
     /* color: white; */
 }
@@ -80,7 +101,7 @@ button{
     cursor: pointer;
     margin-left: 6vw;
     width: 3vw;
-    height: 10vh;
+    min-height: 10vh;
     font-size:xx-large;
     background-color: transparent;
     color: white;
@@ -88,11 +109,46 @@ button{
 }
 
 a{
-    margin-left: 70vw;
+    margin-left: 65vw;
     color:#177580;
     text-decoration: none;
 }
 
+
+
+@keyframes fadein {
+    to { scale: 1; opacity: 1;}    
+}
+
 a:hover{
     color: #b6ee1a;
+}
+
+@media (max-width:740px) {
+
+    .service-head{
+        font-size:xx-large;
+    }
+
+    .service-name{
+        min-width: 25vh;
+    }
+
+    .service-description{
+        display: none;
+    }
+
+    .service-btn{
+        right: 20vw;
+    }
+
+    a{
+        margin-left: 60vw;   
+    }
+}
+
+@media (max-width:530px){
+    a{
+        margin-left: 55vw;   
+    }
 }

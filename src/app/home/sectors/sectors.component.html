@@ -3,16 +3,15 @@
         <div class="sector-heading">
             <p>Career Options</p>
         </div>
-  
+
         <div class="sectors-box">
-            <div class="divider">
-                <div class="sector" [routerLink]="'/Careers/Sectordetails/'+x.id" *ngFor="let x of careers" style="background-image: url({{x.image}});">
-                    <div class="name">
-                        {{x.name}}
-                    </div>
+            <div class="sector" [routerLink]="'/Careers/Sectordetails/'+x.id" *ngFor="let x of careers"
+                style="background-image: url({{x.image}});">
+                <div class="name">
+                    {{x.name}}
                 </div>
-                <a routerLink="/Careers">Explore more>></a>
             </div>
         </div>
+        <a routerLink="/Careers">Explore more>></a>
     </div>
 </div>

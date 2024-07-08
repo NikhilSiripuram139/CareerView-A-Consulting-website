@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Injectable, OnInit, Output, ViewChild, inject, viewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Injectable, OnInit, Output, ViewChild, inject, viewChild } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { AuthserviceService } from '../../Services/authservice.service';
 import { CommonModule } from '@angular/common';
@@ -29,6 +29,7 @@ export class LogComponent{
 
   authobs: Observable<AuthResponse>;
 
+
   onsubmit(){
     const email = this.loginform.value.email;
     const password = this.loginform.value.password;
@@ -39,7 +40,7 @@ export class LogComponent{
       this.authobs = this.authservices.signup(email, password);
     }
   
-    this.authobs.subscribe({
+    this.authobs.subscribe({ 
       next : (res)=>{
         // console.log(res);
         this.router.navigate(['/Home']);

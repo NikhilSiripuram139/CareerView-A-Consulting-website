@@ -125,10 +125,12 @@ export class OptionsService {
   
   getalloptions(){
     return new Observable<option[]>((data)=>{
+      this.authservice.show.next(true);
       setTimeout(()=>{
         this.onfetchsectors().subscribe({
           next: (list)=>{
             data.next(list);
+            this.authservice.show.next(false);
           }
         })
       }, 1000)

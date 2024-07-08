@@ -1,6 +1,6 @@
 .contact-container{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -20,6 +20,10 @@
     font-weight: bold;
     margin-left: 30px;
     margin-bottom: 50px;
+    scale: .8; opacity: 0;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 500px;
 }
 
 .contact-details{
@@ -32,81 +36,115 @@
 
 .name{
     width: 30vw;
-    height: 8vh;
+    min-height: 8vh;
     margin: 2vh 2.2vw;
     display: inline-block;
+    scale: .8; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 50px 150px;
 }
 
 #name{
     width: 30vw;
-    height: 5vh;
+    min-height: 5vh;
     margin-top: 5px;
     /* margin: 2vh 2.2vw;  */
 }
 
 .email{
     width: 30vw;
-    height: 8vh;
+    min-height: 8vh;
     margin: 2vh 2.1vw;
     display: inline-block;
+    scale: .8; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 50px 150px;
 }
 
 #email{
     width: 30vw;
-    height: 5vh;
+    min-height: 5vh;
     margin-top: 5px;
-    /* margin: 2vh 2.1vw;  */
 }
 
 .contact{
     width: 30vw;
-    height: 8vh;
+    min-height: 8vh;
     margin: 2vh 2.2vw;
     display: inline-block;
+    scale: .8; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 50px 150px;
 }
 
 #contact{
     width: 30vw;
-    height: 5vh;
+    min-height: 5vh;
     margin-top: 5px;
     /* margin: 2vh 2.2vw;  */
 }
 
 .region{
     width: 30vw;
-    height: 8vh;
+    min-height: 8vh;
     margin: 2vh 2.1vw;
     display: inline-block;
+    scale: .8; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 50px 150px;
 }
 
 #Region{
     width: 30vw;
-    height: 5vh;
+    min-height: 5vh;
     margin-top: 5px;
     /* margin: 2vh 2.1vw;  */
 }
 
 .meassage{
     width: 65vw;
-    height: 18vh;
+    min-height: 18vh;
     margin: 2vh 2.1vw;
+    scale: .8; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 50px 150px;
 }
 
 
 textarea{
     width: 64.8vw;
-    height: 15vh;
+    min-height: 15vh;
     margin: 2vh 0; 
     outline: none;
 }
 
 .sub-btn{
     width: 65vw;
-    height: 5vh;
+    min-height: 5vh;
     margin: 2vh 2.1vw;
     background-color: #b6ee1a;
     /* font-size: larger;
     font-weight: bold; */
     cursor: pointer;
+    scale: .8; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 50px 100px;
 }
 
+@keyframes fadein {
+    to { scale: 1; opacity: 1;}    
+}
+
+@media (max-width:740px) {
+
+    .contact-head{
+        font-size:xx-large;
+    }
+
+}

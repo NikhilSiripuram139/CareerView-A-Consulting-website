@@ -15,7 +15,7 @@
                 <p>Where Your Career Aspirations Meet Reality</p>
             </div>
         </div>
-
+        
 
         <form class="login-form" (ngSubmit)="onsubmit()" #loginform="ngForm">
 
@@ -25,18 +25,16 @@
 
             <div class="input-box">
                 <label for="emailadd">Email:</label>
-                <input id="emailadd" type="text" placeholder="Email" name="email" ngModel required>
+                <input id="emailadd" type="text" placeholder="Email" name="email" #email="ngModel" ngModel required email>
+                <span style="color: rgb(163, 0, 0);" *ngIf="email.invalid && email.touched">*email is required field</span>
             </div>
 
             <div class="input-box">
                 <label for="pass">Password:</label>
-                <input id="pass" type="text" placeholder="Password" name="password" ngModel required>
+                <input id="pass" type="text" placeholder="Password" name="password" #password="ngModel" ngModel required minlength="8">
+                <span style="color: rgb(163, 0, 0);" *ngIf="password.invalid && password.touched">*please enter valid password</span>
             </div>
 
-            <!-- <div class="input-box" *ngIf="!loginmode">
-                    <label for="password">Re-enter Password:</label>
-                    <input id="reentry" name="reentry" type="text" placeholder="Re-enter password" ngModel required>
-                </div> -->
             <button [disabled]="!loginform.valid" type="submit" class="log-btn">{{loginmode? 'Log in' : 'Sign up'}}</button>
 
             <div class="input-box">
@@ -45,18 +43,6 @@
             </div>
 
         </form>
-
-        <!-- <div>
-                <a routerLink="/Home" id="cancel"><i class="fa-solid fa-x"></i></a>
-            </div>
-            <input id="username" type="text" placeholder="Username" #username>
-            <input id="password" type="text" placeholder="password" #passward>
-            <button id="log-btn" >Log in</button>
-            <a href="">Forgotten password?</a>
-            <hr>
-
-            <button id="create-btn">Create new account</button> -->
-
 
     </div>
 </div>

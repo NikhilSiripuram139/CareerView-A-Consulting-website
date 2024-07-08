@@ -1,57 +1,100 @@
 <div class="header-container">
-    <div class="topheader">
-        <div class="socialid">
-            <nav> 
-                <ul>
-                    <li><a href="https://www.facebook.com/" target="main"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://twitter.com/?lang=en" target="main"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="https://github.com/" target="main"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com/feed/" target="main"><i class="fa-brands fa-linkedin"></i></a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="sections">
-            <nav>
-                <ul>
-                    <li><a routerLink="Home" fragment="banner">search</a></li>
-                    <li><a routerLink="Home" fragment="sectors">sectors</a></li>
-                    <li><a routerLink="Home" fragment="services">services</a></li>
-                    <li><a routerLink="Home" fragment="testimony">testimony</a></li>
-                    <li><a routerLink="Home" fragment="contact">contact us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <div class="bottomheader">
-        <div class="logo" routerLink="/Home">
-            <span id="s1">C</span>
-            <span id="s2">areer</span>
-            <span id="s3">V</span>
-            <span id="s4">iew</span>
-        </div>
+    
+
+        <div class="topheader">
+            <div class="socialid">
+                <nav>
+                    <ul>
+                        <li><a href="https://www.facebook.com/" target="main"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=en" target="main"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="https://github.com/" target="main"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/feed/" target="main"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
  
-        <div class="links">
-            <nav>
-                <ul>
-                    <li><a routerLink="/Home" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}"><button>Home</button></a></li>
-                    <li><a routerLink="/About" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}"><button >About us</button></a></li>
-                    <li><a routerLink="/Services" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}"><button>Services</button></a></li>
-                    <li><a routerLink="/Contact us" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}"><button>Contact us</button></a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="login" > 
-            <div *ngIf="!isloged" >
-                <button  routerLink="/Login" >Login</button>
+            <div class="menu" [ngStyle]="{ 'right' : menuclicked ? '26vw' : '3vw',  'color' : menuclicked ? 'black' : 'white'}">
+                <input type="checkbox" id="side-bar" (click)="onmenucliked()">
+                <label for="side-bar" *ngIf="menuclicked">
+                    <i class="fa-solid fa-x"></i>
+                </label>
+                <label for="side-bar" *ngIf="!menuclicked">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
             </div>
-            <div *ngIf="isloged">
-                <button (click)="onlogout()"  routerLink="/Login" [queryParams]="{logout:true}">Logout</button>
+            
+
+            <div class="sections">
+                <nav>
+                    <ul>
+                        <li><a routerLink="Home" fragment="banner">search</a></li>
+                        <li><a routerLink="Home" fragment="sectors">sectors</a></li>
+                        <li><a routerLink="Home" fragment="services">services</a></li>
+                        <li><a routerLink="Home" fragment="testimony">testimony</a></li>
+                        <li><a routerLink="Home" fragment="contact">contact us</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
+        <div class="bottomheader">
+            <div class="logo" routerLink="/Home">
+                <span id="s1">C</span>
+                <span id="s2">areer</span>
+                <span id="s3">V</span>
+                <span id="s4">iew</span>
+            </div>
 
-    </div>
+            <div class="links">
+                <nav>
+                    <ul>
+                        <li><a routerLink="/Home" [routerLinkActive]="'active'"
+                                [routerLinkActiveOptions]="{exact:true}"><button>Home</button></a></li>
+                        <li><a routerLink="/About" [routerLinkActive]="'active'"
+                                [routerLinkActiveOptions]="{exact:true}"><button>About us</button></a></li>
+                        <li><a routerLink="/Services" [routerLinkActive]="'active'"
+                                [routerLinkActiveOptions]="{exact:true}"><button>Services</button></a></li>
+                        <li><a routerLink="/Contact us" [routerLinkActive]="'active'"
+                                [routerLinkActiveOptions]="{exact:true}"><button>Contact us</button></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="links-by-menu" [ngStyle]="{ 'transform' : menuclicked ? 'translateX(0)' : 'translateX(300px)' }" >
+                <nav>
+                    <ul>
+                        <li><a routerLink="/Home" [routerLinkActive]="'active'"
+                                [routerLinkActiveOptions]="{exact:true}"><button>Home</button></a></li>
+                        <li><a routerLink="/About" [routerLinkActive]="'active'"
+                                [routerLinkActiveOptions]="{exact:true}"><button>About us</button></a></li>
+                        <li><a routerLink="/Services" [routerLinkActive]="'active'"
+                                [routerLinkActiveOptions]="{exact:true}"><button>Services</button></a></li>
+                        <li><a routerLink="/Contact us" [routerLinkActive]="'active'"
+                                [routerLinkActiveOptions]="{exact:true}"><button>Contact us</button></a></li>
+                        <li><a href="https://www.facebook.com/" target="main"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://twitter.com/?lang=en" target="main"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://github.com/" target="main"><i class="fa-brands fa-github"></i> Github</a></li>
+                        <li><a href="https://www.linkedin.com/feed/" target="main"><i class="fa-brands fa-linkedin"></i> Linkedin</a></li>
+                        <li class="log"><div *ngIf="!isloged">
+                            <button routerLink="/Login"><i class="fa-solid fa-user"></i> Login</button>
+                        </div>
+                        <div *ngIf="isloged">
+                            <button (click)="onlogout()" routerLink="/Login" [queryParams]="{logout:true}"><i class="fa-solid fa-user"></i> Logout</button>
+                        </div></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="login">
+                <div *ngIf="!isloged">
+                    <button routerLink="/Login"><i class="fa-solid fa-user"></i> Login</button>
+                </div>
+                <div *ngIf="isloged">
+                    <button (click)="onlogout()" routerLink="/Login" [queryParams]="{logout:true}"><i class="fa-solid fa-user"></i> Logout</button>
+                </div>
+            </div>
+
+        </div>
+    
 </div>
 
 <!-- <app-log *ngIf="showlog" (logging)="logreceive($event)"></app-log> -->

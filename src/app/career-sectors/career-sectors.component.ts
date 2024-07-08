@@ -4,6 +4,7 @@ import { OptionsService } from '../Services/options.service';
 import { option } from '../Models/careeroptions';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { details } from '../Models/details';
+import { AuthserviceService } from '../Services/authservice.service';
 
 @Component({
   selector: 'app-career-sectors',
@@ -15,10 +16,12 @@ import { details } from '../Models/details';
 export class CareerSectorsComponent implements OnInit{
 
   careeroptions=inject(OptionsService);
+  authservice = inject(AuthserviceService);
   router=inject(Router);
 
   activeroute=inject(ActivatedRoute);
   searchstring:string;
+  showdetails:boolean;
 
   careers:option[];
  
@@ -43,7 +46,7 @@ export class CareerSectorsComponent implements OnInit{
 
     
   }
-  
+
   
 
 }

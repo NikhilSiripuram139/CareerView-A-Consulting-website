@@ -9,11 +9,13 @@
 }
 
 .tm-heading{
-    padding-top: 25vh;
+    padding-top: 25vh; 
     /* height: 30vh; */
     color: #177580;
     font-size: 50px;
     font-weight: bold;
+    opacity: 0;
+    animation: heading-fadein linear .8s forwards;
 }
 
 .tm-heading-des{
@@ -22,12 +24,38 @@
     font-size: large;
     font-weight: lighter;
     margin-top: 5vh;
+    opacity: 0;
+    animation: heading-fadein linear .9s forwards
 }
 
 p{
     margin: 4vh 0vw;
+    opacity: 0;
+    scale: .9;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 200px;
 }
 
 ul{
     margin-left: 3vw;
+    opacity: 0;
+    scale: .9;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 200px;
+}
+
+@keyframes heading-fadein {
+    to { opacity: 1;}
+}
+
+@keyframes section-fadein {
+    to { scale: 1; opacity: 1;}
+}
+
+@media (max-width:740px){
+    .tm-heading{
+        font-size:40px;
+    }
 }

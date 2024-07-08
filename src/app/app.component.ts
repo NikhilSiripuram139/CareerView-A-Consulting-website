@@ -40,10 +40,6 @@ export class AppComponent implements OnInit {
       this.errormessage=data;
     })
 
-    this.authservice.show.subscribe((data)=>{
-      this.showloader=data;
-    })
-
     this.router.events.subscribe((routerevent: Event) => {
       if (routerevent instanceof ResolveStart) {
         this.showloader = true;

@@ -1,10 +1,10 @@
 .tm-container{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
 }
- 
+  
 .tm-main{
     width: 80vw;
     margin: 0vh 10vw;
@@ -19,32 +19,41 @@
     font-weight: bold;
     margin-left: 30px;
     margin-bottom: 50px;
-    /* text-align: center; */
+    scale: .8; opacity: 0;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 500px;
 }
 
 .tm-clients{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 70vw;
-    margin:5vh 5vw;
-    padding-left: 2vw;
+    width: 100%;
+    /* margin: 0 5%; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 15px;
 }
 
 
 
 .clinet{
-    width: 30vw;
-    height: 20vh;
-    margin: 5vh 2vw;
-    display: inline-block;
+    /* box-sizing: content-box; */
+    /* width: 30vw; */
+    min-height: 20vh;
+    /* margin: 5vh 2vw; */
+    /* display: inline-block; */
+    /* overflow: hidden; */
+    /* background-color: #fff; */
+    scale: .8; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 250px;
 }
 
 
 img{
     width: 10vw;
     height: 20vh;
+    /* size: 20px; */
     float: left;
     border-radius: 80px;
     shape-outside:url(../../../assets/Client1.jpg);
@@ -60,8 +69,24 @@ img{
 }
 
 .c-review{
+    min-height: 20vh;
     margin-top: 10px;
     font-size:medium;
     font-weight: lighter;
     color: white;
 }
+
+@keyframes fadein {
+    to { scale: 1; opacity: 1;}    
+}
+
+@media (max-width:740px) {
+
+    .tm-head{
+        font-size:xx-large;
+    }
+
+}
+
+
+

@@ -14,6 +14,8 @@
     color: #177580;
     font-size: 50px;
     font-weight: bold;
+    opacity: 0;
+    animation: heading-fadein linear .8s forwards;
 }
 
 .pn-heading-des{
@@ -21,6 +23,8 @@
     font-size: large;
     font-weight: lighter;
     margin-top: 10vh;
+    opacity: 0;
+    animation: heading-fadein linear .9s forwards;
 }
 
 .s1-heading{
@@ -30,6 +34,11 @@
     color: #177580;
     font-size:x-large;
     font-weight: bold;
+    opacity: 0;
+    scale: .8;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
 }
 
 .s1-des{
@@ -47,6 +56,11 @@
     color: #177580;
     font-size:x-large;
     font-weight: bold;
+    opacity: 0;
+    scale: .8;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
 }
 
 .s2-des{
@@ -64,6 +78,11 @@
     color: #177580;
     font-size:x-large;
     font-weight: bold;
+    opacity: 0;
+    scale: .8;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
 }
 
 .s3-des{
@@ -74,12 +93,34 @@
     margin-top: 5vh;
 }
 
-
-
 p{
     margin: 5vh 0vw;
+    opacity: 0;
+    scale: .9;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 200px;
 }
 
 ul{
     margin-left: 3vw;
+    opacity: 0;
+    scale: .9;
+    animation: section-fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 200px;
+}
+
+@keyframes heading-fadein {
+    to { opacity: 1;}
+}
+
+@keyframes section-fadein {
+    to { scale: 1; opacity: 1;}
+}
+
+@media (max-width:740px){
+    .pn-heading{
+        font-size:40px;
+    }
 }

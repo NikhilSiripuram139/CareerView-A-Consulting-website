@@ -3,6 +3,7 @@ import { details } from '../Models/details';
 import { OptionsService } from '../Services/options.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AuthserviceService } from '../Services/authservice.service';
 
 @Component({
   selector: 'app-sector-details',
@@ -17,30 +18,28 @@ export class SectorDetailsComponent implements OnInit{
   sectorid:number;
   sectordetails:details[]=[];
   showdetails:boolean=false;
+  authservice = inject(AuthserviceService);
 
   optionsservice=inject(OptionsService);
   activeroute=inject(ActivatedRoute);
 
   ngOnInit(){
-
     this.optionsservice.onfetchsectordetails().subscribe({
       next: (list)=>{
         this.sectordetails = list;
-        // console.log(this.sectordetails)
+        this.authservice.show.next(false);
       }
     })
 
     this.activeroute.paramMap.subscribe((data)=>{
       this.sectorid=+data.get('id');
-      // console.log(this.sectorid);
     })
 
 
     setTimeout(() => {
       this.selectedsector=this.sectordetails.find(x=>x.id===this.sectorid);
-      // console.log(this.selectedsector);
       this.showdetails=true;
-    }, 1000);
+    }, 300);
 
     this.activeroute.fragment.subscribe((data: string) => {
       this.jumptoview(data);

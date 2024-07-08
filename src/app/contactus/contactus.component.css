@@ -1,6 +1,5 @@
 .cu-container{
     width: 100vw;
-    /* margin-top: 20vh; */
     color: white;
 }
 
@@ -11,44 +10,52 @@
 
 .cu-heading{
     padding-top: 25vh;
-    /* height: 30vh; */
     color: #177580;
     font-size: 50px;
     font-weight: bold;
+    opacity: 0;
+    animation: heading-fadein linear .7s forwards;
 }
 
 .cu-head-des{
-    /* margin-left: 2vw; */
     padding-top: 1vh;
-    /* display: inline-block; */
-    /* width: 45%; */
     color: white;
     font-size: large;
     font-weight: lighter;
+    opacity: 0;
+    animation: heading-fadein linear .7s forwards;
 }
 
 .cu-general{
     width: 80vw;
     margin-left: 6vw;
-    /* height: 75vh; */
     margin-top: 10vh;
     color:#177580;
-    /* display: block; */
     font-size:xx-large;
     font-weight: bold;
 }
 
 
 .cu-general-info{
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
     color: white;
+    opacity: 0;
+    animation: heading-fadein linear .8s forwards;
+}
+
+.cu-g-head{
+    margin-bottom: 10vh;
+    opacity: 0;
+    animation: heading-fadein linear .7s forwards;
 }
 
 .info1{
-    display: inline-block;
-    width: 25vw;
-    margin-top: 5vh;
-    margin-left: 5vh;
+    /* width: 20vw; */
+    /* margin-top: 5vh; */
+    margin-bottom: 3vh;
     font-size: x-large;
     font-weight: bold;
 }
@@ -60,9 +67,9 @@
 }
 
 .info2{
-    display: inline-block;
-    width: 25vw;
-    margin-top: 5vh;
+    /* display: block; */
+    /* width: 20vw; */
+    margin-bottom: 3vh;
     font-size: x-large;
     font-weight: bold;
 }
@@ -74,9 +81,9 @@
 }
 
 .info3{
-    display: inline-block;
-    width: 35vw;
-    margin-top: 5vh;
+    /* display: block; */
+    /* width: 30vw; */
+    margin-bottom: 3vh;
     font-size: x-large;
     font-weight: bold;
 }
@@ -107,37 +114,35 @@
 }
 
 .cu-analyst-head{
-    /* margin-left: 3vw; */
-    /* height: 75vh; */
-    margin-top: 15vh;
+    margin-top: 5vh;
     color:#177580;
-    /* display: block; */
     font-size:xx-large;
     font-weight: bold;
+    opacity: 0;
+    animation: heading-fadein linear .7s forwards;
 }
 
 .cu-analyst-des{
-    /* margin-left: 2vw; */
     margin-top: 5vh;
     padding-right: 5vw;
-    /* display: inline-block; */
-    /* width: 45%; */
     color: white;
     font-size: large;
     font-weight: lighter;
-
+    opacity: 0;
+    animation: heading-fadein linear .8s forwards;
 }
 
 .contact-head{
     margin-top: 15vh;
     width: 80vw;
-    /* margin-left: 3vw; */
-    /* height: 75vh; */
-    /* margin-top: 10vh; */
+    float: left;
     color:#177580;
-    /* display: block; */
     font-size:xx-large;
     font-weight: bold;
+    scale: .9; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 50px 150px;
 }
 
 .contact-details{
@@ -156,13 +161,16 @@
     display: inline-block;
     font-size: large;
     font-weight: lighter;
+    scale: .8; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 50px 150px;
 }
 
 #name{
     width: 30vw;
     height: 5vh;
     margin-top: 5px;
-    /* margin: 2vh 2.2vw;  */
 }
 
 .email{
@@ -172,13 +180,16 @@
     display: inline-block;
     font-size: large;
     font-weight: lighter;
+    scale: .8; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 50px 150px;
 }
 
 #email{
     width: 30vw;
     height: 5vh;
     margin-top: 5px;
-    /* margin: 2vh 2.1vw;  */
 }
 
 .contact{
@@ -188,13 +199,16 @@
     display: inline-block;
     font-size: large;
     font-weight: lighter;
+    scale: .8; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 50px 150px;
 }
 
 #contact{
     width: 30vw;
     height: 5vh;
     margin-top: 5px;
-    /* margin: 2vh 2.2vw;  */
 }
 
 .region{
@@ -204,13 +218,16 @@
     display: inline-block;
     font-size: large;
     font-weight: lighter;
+    scale: .8; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 50px 150px;
 } 
-
+ 
 #Region{
     width: 30vw;
     height: 5vh;
     margin-top: 5px;
-    /* margin: 2vh 2.1vw;  */
 }
 
 .meassage{
@@ -219,8 +236,12 @@
     margin: 2vh 2.1vw;
     font-size: large;
     font-weight: lighter;
+    scale: .8; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 50px 150px;
 }
-
+ 
 textarea{
     width: 64.8vw;
     height: 15vh;
@@ -233,4 +254,26 @@ textarea{
     height: 5vh;
     margin: 2vh 2.1vw;
     background-color: #b6ee1a;
+    scale: .8; opacity: 0.1;
+    animation: fadein linear forwards;
+    animation-timeline: view();
+    animation-range: 50px 100px;
+}
+
+@keyframes heading-fadein {
+    to { opacity: 1;}
+}
+
+@keyframes fadein {
+    to { scale: 1; opacity: 1;}    
+}
+
+@media (max-width:740px){
+    .cu-heading{
+        font-size:40px;
+    }
+
+    .maintag{
+        font-size: 30px;
+    }
 }

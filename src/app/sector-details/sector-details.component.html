@@ -1,17 +1,11 @@
-<div class="loader" *ngIf="!showdetails">
-    <div class="center">
-      <div class="ring">
-      </div>
-      <span>Loading...</span>
-    </div>
-</div> 
-<div class="sd-container">
-    <div class="sd-main" *ngIf="showdetails">
+
+<div class="sd-container" *ngIf="showdetails">
+    <div class="sd-main">
         <div class="sd-content-table" >
             <div class="ct-head">
                 <p>Content</p>
             </div>
- 
+  
             <ul>
                 <li><a [routerLink]="'/Careers/Sectordetails/'+sectorid" fragment="what">What is {{selectedsector.name}}?</a></li>
                 <li><a [routerLink]="'/Careers/Sectordetails/'+sectorid" fragment="Understand">Understanding {{selectedsector.name}}?</a></li>
@@ -156,5 +150,5 @@
             </section>
         </div>
     </div>
-    <button id="backhome" routerLink="/Careers">Go to sectors <i class="fa-solid fa-arrow-right"></i></button>
+    <button *ngIf="showdetails" id="backhome" routerLink="/Careers">Go to sectors <i class="fa-solid fa-arrow-right"></i></button>
 </div>
