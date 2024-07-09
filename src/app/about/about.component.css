@@ -1,6 +1,5 @@
 .about-container{
     width: 100vw; 
-    /* height: 100vh; */
 }
 
 .about-main{
@@ -10,7 +9,6 @@
 
 .about-heading{
     padding-top: 25vh;
-    /* height: 30vh; */
     color: #177580;
     font-size: 50px;
     font-weight: bold;
@@ -20,8 +18,7 @@
 
 
 .section1{
-    /* width: 80vw; */
-    min-height: 75vh;
+    height: 75vh;
     margin-top: 10vh;
     color: white;
     display: block;
@@ -49,7 +46,6 @@
 
 
 .s1-des{
-    /* margin-left: 5vw; */
     padding-top: 5vh;
     display: inline-block;
     width: 45%;
@@ -61,12 +57,9 @@
 }
 
 .section2{
-    /* width: 80vw; */
-    min-height: 75vh;
+    height: 75vh;
     color: white;
     display: inline-block;
-    /* float: right;
-    clear: left; */
 }
 
 .section2 img{
@@ -109,8 +102,7 @@
 }
 
 .section3{
-    /* width: 80vw; */
-    min-height: 75vh;
+    height: 75vh;
     color: white;
     display: block;
     display: block;
@@ -141,7 +133,6 @@
 }
 
 .s3-des{
-    /* margin-left: 5vw; */
     padding-top: 5vh;
     width: 45%;
     display: inline-block;
@@ -155,8 +146,7 @@
 }
 
 .section4{
-    /* width: 80vw; */
-    min-height: 75vh;
+    height: 75vh;
     color: white;
     display: block;
 }
@@ -187,7 +177,6 @@
 }
 
 .s4-des{
-    /* margin-left: 5vw; */
     padding-top: 5vh;
     width: 45%;
     float: right;
@@ -201,8 +190,7 @@
 }
 
 .section5{
-    /* width: 80vw; */
-    min-height: 75vh;
+    height: 75vh;
     color: white;
     display: block;
 }
@@ -233,7 +221,6 @@
 }
 
 .s5-des{
-    /* margin-left: 5vw; */
     padding-top: 5vh;
     width: 45%;
     display: inline-block;
@@ -375,5 +362,152 @@
 
     .maintag{
         font-size: 30px;
+    }
+}
+
+@media (max-width:431px) and (max-height:935px){    
+    .about-heading{
+        padding-top: 15vh;
+        font-size: 23px;
+    }
+    
+    .section1{
+        height: 45vh;
+        margin-top: 5vh;
+    }
+    
+    .section1 img{
+        width: 65vw;
+        height: 20vh;
+        position: absolute;
+        right: 20vw;
+        margin-top: 5vh;
+    }
+    
+    .s1-head{
+        position: absolute;
+        padding-top: 0vh;
+        font-size: large;
+    }
+    
+    
+    .s1-des{
+        position: absolute;
+        margin-top: 22vh;
+        margin-left: 0vw;
+        width: 80vw;
+        font-size:medium;
+    }
+    
+    .section2{
+        height: 45vh;
+        margin-top: 0vh;
+    }
+    
+    .section2 img{
+        width: 65vw;
+        height: 20vh;
+        position: absolute;
+        right: 20vw;
+        margin-top: 5vh;
+        padding-top: 0vh;
+    }
+    
+    .s2-head{
+        position: absolute;
+        padding-top: 0vh;
+        margin-left: 50vw;
+        font-size: large;
+    }
+    
+    .s2-des{
+        position: absolute;
+        margin-top: 22vh;
+        margin-left: 0vw;
+        width: 80vw;
+        font-size:medium;
+    }
+    
+    .section3{
+        height: 45vh;
+        margin-top: 5vh;
+    }
+    
+    .section3 img{
+        width: 65vw;
+        height: 20vh;
+        position: absolute;
+        right: 20vw;
+        margin-top: 5vh;
+    }
+    
+    .s3-head{
+        position: absolute;
+        padding-top: 0vh;
+        font-size: large;
+    }
+    
+    .s3-des{
+        position: absolute;
+        margin-top: 22vh;
+        margin-left: 0vw;
+        width: 80vw;
+        font-size:medium;
+    }
+    
+    .section4{
+        height: 45vh;
+        margin-top: 0vh;
+    }
+    
+    .section4 img{
+        width: 65vw;
+        height: 20vh;
+        position: absolute;
+        right: 20vw;
+        margin-top: 5vh;
+        padding-top: 0vh;
+    }
+    
+    .s4-head{
+        position: absolute;
+        margin-left: 51vw;
+        padding-top: 0vh;
+        font-size: large;
+    }
+    
+    .s4-des{
+        position: absolute;
+        margin-top: 22vh;
+        margin-left: 0vw;
+        width: 80vw;
+        font-size:medium;
+    }
+    
+    .section5{
+        height: 45vh;
+        margin-top: 0vh;
+    }
+    
+    .section5 img{
+        width: 65vw;
+        height: 20vh;
+        position: absolute;
+        right: 20vw;
+        margin-top: 5vh;
+    }
+    
+    .s5-head{
+        position: absolute;
+        padding-top: 0vh;
+        font-size: large;
+    }
+    
+    .s5-des{
+        position: absolute;
+        margin-top: 22vh;
+        margin-left: 0vw;
+        width: 80vw;
+        font-size:medium;
     }
 }

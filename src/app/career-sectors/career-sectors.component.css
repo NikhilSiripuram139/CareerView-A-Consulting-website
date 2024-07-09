@@ -9,7 +9,6 @@
 
 .cs-heading{
     padding-top: 25vh;
-    /* height: 30vh; */
     color: #177580;
     font-size: 50px;
     font-weight: bold;
@@ -19,10 +18,8 @@
 
 .section1{
     width: 80vw;
-    /* height: 75vh; */
     margin-top: 10vh;
     color: white;
-    /* display: block; */
 }
 
 .section1-head{
@@ -35,12 +32,10 @@
 
 .section1-des{
     width: 75vw;
-    /* height: 75vh; */
     margin-left: 3vw;
     margin-top: 5vh;
     margin-bottom: 20vh;
     color: white;
-    /* display: block;    */
     font-size: large;
     font-weight:lighter;
     opacity: 0;
@@ -56,7 +51,6 @@
 .sectors-list{
     width: 70vw;
     margin:5vh 5vw;
-    /* background-color: #177580; */
 }
 
 .sector{
@@ -71,7 +65,6 @@
     height: 35vh;
     margin: 1.5vh 0vw;
     color: white;
-    /* padding-top: 30vh; */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -83,9 +76,7 @@
 
 .name:hover{
     width: 72vw;
-    /* height: 35.5vh; */
     margin: 0vh -1vw;
-    /* box-shadow: 1px 3px 10px rgb(86, 85, 85); */
 }
 
 #backhome{
@@ -125,4 +116,42 @@
     #backhome{
         width: 24vw;
     }
+}
+
+@media (max-width:431px) and (max-height:935px){    
+    .cs-heading{
+        padding-top: 15vh;
+        font-size: 23px;
+    }
+    
+    .section1{
+        margin-top: 5vh;
+    }
+    
+    .section1-head{
+        font-size: large;
+    }
+    
+    .section1-des{
+        margin-top: 2vh;
+        margin-bottom: 10vh;
+        font-size: medium;
+    }
+    
+    .section1-des p{
+        margin: 2vh 0vw;
+    }
+    
+    .name{
+        height: 15vh;
+        font-size:large;
+        font-weight: bold;
+    }
+    
+    #backhome{
+        width:35vw;
+        height: 3vh;
+        font-size:medium;
+    }
+     
 }

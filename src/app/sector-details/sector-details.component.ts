@@ -39,7 +39,7 @@ export class SectorDetailsComponent implements OnInit{
     setTimeout(() => {
       this.selectedsector=this.sectordetails.find(x=>x.id===this.sectorid);
       this.showdetails=true;
-    }, 300);
+    }, 500);
 
     this.activeroute.fragment.subscribe((data: string) => {
       this.jumptoview(data);

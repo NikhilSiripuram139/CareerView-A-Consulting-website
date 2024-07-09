@@ -54,31 +54,30 @@
     
             <form class="contact-details" (ngSubmit)="onsubmit()" #contactusform="ngForm">
                 <div class="divider">
-                    <div class="name">
-                        <h4>Name</h4>
-                        <input id="name" type="text" placeholder="Name" name="name" ngModel required>
+                    <div class="nameinput">
+                        <h6>Name</h6>
+                        <input id="nameinput" type="text" placeholder="Name" name="name" ngModel required>
                     </div>
-                    <div class="email">
-                        <h4>Email</h4>
-                        <input id="email" type="text" placeholder="Email" name="email" ngModel required>
+                    <div class="emailinput">
+                        <h5>Email</h5>
+                        <input id="emailinput" type="text" placeholder="Email" name="email" ngModel required>
                     </div>
-                    <div class="contact">
-                        <h4>Contact</h4>
-                        <input id="contact" type="tel" placeholder="Contact" name="contactno" ngModel required>
+                    <div class="contactinput">
+                        <h5>Contact</h5>
+                        <input id="contactinput" type="tel" placeholder="Contact" name="contactno" ngModel required>
                     </div>
-                    <div class="region">
-                        <h4>Reagion</h4> 
-                        <select aria-label="Region" id="Region" name="region" ngModel required >
+                    <div class="regioninput">
+                        <h5>Reagion</h5> 
+                        <select aria-label="Region" id="Regioninput" name="region" ngModel required >
                             <option value="Hyderabad">Hyderabad</option>
                             <option value="Chennai">Chennai</option>
                             <option value="pune">pune</option>
                             <option value="Bangalore">Bangalore</option>
-                        </select>
+                        </select> 
                     </div>
-                    <div class="meassage">
-                        <h4>Message</h4>
-                        <!-- <input type="textarea" id="meassage" cols="139" rows="8" placeholder="Message"> -->
-                        <textarea id="meassage" cols="139" rows="8" placeholder="Message" name="message" ngModel required></textarea>
+                    <div class="meassageinput">
+                        <h5>Message</h5>
+                        <textarea id="meassageinput" cols="139" rows="8" placeholder="Message" name="message" ngModel required></textarea>
                     </div>
                     <button class="sub-btn" type="submit">Submit</button>
                 </div>

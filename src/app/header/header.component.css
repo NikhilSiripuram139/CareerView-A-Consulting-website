@@ -1,6 +1,6 @@
 .header-container{
     min-width: 100vw;
-    min-height: 15vh;
+    min-height: 15%;
     position:fixed;
     z-index: 99;
     top: 0;
@@ -9,21 +9,18 @@
 }
 
 .sticky{
-    /* background: linear-gradient(  45deg , #504e4e, rgb(28, 27, 27)) ; */
     background-color: #000000;
-    min-height: 13vh;
+    min-height: 13%;
 }
 
 .topheader{
     min-width: 100vw;
     background-color: transparent;
-    /* background-color: #177580; */
 }
 
 .bottomheader{
     min-width: 100vw;
     background-color: transparent;
-    /* background-color: rgb(0, 0, 28); */
     color: white;
 }
 
@@ -51,7 +48,6 @@
     position: absolute;
     top: 4vh;
     z-index: 999;
-    /* right: 3vw; */
     font-size: larger;
     transition: 0.3s;
 }
@@ -223,10 +219,6 @@
     cursor: pointer;
 }
 
-/* .login button i{
-    color: white;
-} */
-
 .login button:hover{
     transform: scale(1.1);
 }
@@ -238,15 +230,6 @@
     transition: .6s;
 }
 
-
-/* .header-container.sticky #s1,
-.header-container.sticky #s2,
-.header-container.sticky #s3,
-.header-container.sticky #s4
-{
-    font-size: 30px;
-    text-shadow: 3px 3px 6px rgb(33, 31, 31);
-} */
 
 .header-container.sticky .links nav ul{
     top: 6.5vh;
@@ -329,7 +312,6 @@
     }
 
     .active{
-        /* min-height: 4vh; */
         border-radius: 0px;
         background-color: #696969;
     }

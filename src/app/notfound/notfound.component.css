@@ -9,12 +9,8 @@
 .nf-main{
     margin-top: 10vh;
     width: 80vw;
-    /* height: 100vh; */
-    /* height: 100%; */
     background-color: #000000;
-    /* align-self: center; */
     text-align: center;
-    /* color: white; */
 }
 
 .head{

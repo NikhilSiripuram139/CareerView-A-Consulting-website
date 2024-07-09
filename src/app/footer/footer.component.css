@@ -1,9 +1,7 @@
 .footer-container{
     width: 100vw;
-    /* min-height: 50vh; */
     display: flex;
     justify-content: center;
-    /* position: static; */
 }
 
 .footer-main{
@@ -24,32 +22,27 @@
     animation-range: 50px 300px;
 } 
 
-/* hr{
-    display: none;
-} */
 
 .attachments{
     display: flex;
     margin-top: 10vh;
-    /* justify-content: center; */
 }
 
 .attachments1{
     margin-left: 5vw;
     width: 25vw;
-    min-height: 22vh;
+    min-height: 22%;
     display: block;
 }
 
 .attachments2{
     margin-left: 5vw;
     width: 35vw;
-    min-height: 22vh;
+    min-height: 22%;
     display: block;
 }
 
 .attachments1 a{
-    /* margin-bottom: 10px; */
     text-decoration: none;
     font-size: large;
     color: white;
@@ -57,7 +50,6 @@
 
 .attachments2 a{
     text-decoration: none;
-    /* margin-bottom: 10px; */
     font-size: large;
     color: white;
 }
@@ -68,12 +60,12 @@
  
 .attachments1 p:hover{
     transform: scale(1.1);
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .attachments2 p:hover{
     transform: scale(1.1);
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .attachments2 p{
@@ -94,24 +86,19 @@
     color: #b6ee1a;
     font-family:"Permanent Marker", "Caveat", "Pacifico", cursive;
     font-weight: 40;
-    /* font-style: normal; */
     font-size: large;
 }
  
 .socialid{
     float: left;
-    /* margin-left: 2vw; */
     padding-top: 15px;
     color: white;
-
-    /* background-color: black; */
 }
 
 .socialid a{
     margin: 0px 6px;
     text-decoration: none;
     color: #177580;
-    /* color: #177580; */
     font-size: large;
 }
 
@@ -138,9 +125,78 @@
         font-size:10px;
     }
 
-
     .socialid i{
         font-size:15px;
         margin-bottom: 1vh;
+    }
+}
+
+@media (max-width:431px) and (max-height:935px){
+    .footer-container{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footer-main{
+        width:80vw;
+        margin: 0vh 10vw;
+        padding-top: 5vh;
+        padding-left: 1.8vw;
+    }
+    
+    .tagline{
+        font-size: 23px;
+        scale: .9; 
+    } 
+    
+    
+    .attachments{
+        margin-top: 5vh;
+    }
+    
+    .attachments1{
+        width: 30vw;
+    }
+    
+    .attachments2{
+        width: 40vw;
+    }
+    
+    .attachments1 a{
+        font-size:medium;
+    }
+    
+    .attachments2 a{
+        font-size: medium;
+    }
+    
+    .copyright{
+        margin:10px 0px;
+    }
+    
+    .copyright a{
+        font-weight: 20;
+        font-size: small;
+    }
+     
+    .socialid{
+        padding-top: 8px;
+    }
+    
+    .socialid a{
+        margin: 0px 0px 0 11px;
+    }
+    
+    .socialid i{
+        font-size: small;
+    }
+   
+    .attachments1 p:hover{
+        margin-left: 0px;
+    }
+    
+    .attachments2 p:hover{
+        margin-left: 0px;
     }
 }

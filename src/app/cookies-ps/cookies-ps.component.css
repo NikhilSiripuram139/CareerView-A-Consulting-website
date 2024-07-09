@@ -1,6 +1,5 @@
 .cps-container{
     width: 100vw;
-    /* height: 100vh; */
 }
 
 .cps-main{
@@ -10,7 +9,6 @@
 
 .cps-heading{
     padding-top: 24vh;
-    /* height: 30vh; */
     color: #177580;
     font-size: 50px;
     font-weight: bold;
@@ -30,7 +28,6 @@
 .s1-heading{
     padding-top: 15vh;
     margin-left: 3vw;
-    /* height: 30vh; */
     color: #177580;
     font-size:x-large;
     font-weight: bold;
@@ -46,7 +43,6 @@
 
 .s2-heading{
     padding-top: 10vh;
-    /* height: 30vh; */
     margin-left: 3vw;
     color: #177580;
     font-size:x-large;
@@ -64,7 +60,6 @@
 .s3-heading{
     padding-top: 10vh;
     margin-left: 3vw;
-    /* height: 30vh; */
     color: #177580;
     font-size:x-large;
     font-weight: bold;
@@ -81,7 +76,6 @@
 .s4-heading{
     padding-top: 10vh;
     margin-left: 3vw;
-    /* height: 30vh; */
     color: #177580;
     font-size:x-large;
     font-weight: bold;
@@ -124,5 +118,66 @@ ul{
 @media (max-width:740px){
     .cps-heading{
         font-size:40px;
+    }
+}
+
+@media (max-width:431px) and (max-height:935px){    
+    .cps-heading{
+        padding-top: 15vh;
+        margin-left: 3vw;
+        font-size: 23px;
+    }
+    
+    .cps-heading-des{
+        font-size: medium;
+        margin-top: 2vh;
+    }
+    
+    .s1-heading{
+        padding-top: 0vh;
+        font-size:23px;
+    }
+    
+    .s1-des{
+        font-size: medium;
+        margin-top: 2vh;
+    }
+    
+    .s2-heading{
+        padding-top: 0vh;
+        font-size:23px;
+    }
+    
+    .s2-des{
+        font-size: medium;
+        margin-top: 2vh;
+    }
+    
+    .s3-heading{
+        padding-top: 0vh;
+        font-size:23px;
+    }
+    
+    .s3-des{
+        font-size: medium;
+        margin-top: 2vh;
+    }
+    
+    .s4-heading{
+        padding-top: 0vh;
+        font-size:23px;
+    }
+    
+    .s4-des{
+        font-size: medium;
+        margin-top: 2vh;
+    }
+    
+    p{
+        margin: 2vh 0vw;
+    }
+    
+    ul{
+        margin-left: 6vw;
     }
 }

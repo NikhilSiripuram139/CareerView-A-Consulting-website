@@ -6,6 +6,7 @@ import { BehaviorSubject, catchError, Subject, tap, throwError } from 'rxjs';
 import { UserCredentials } from '../Models/usercredentials';
 import { isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +28,7 @@ export class AuthserviceService {
   signup(email: string, password: string) {
     const data = { email: email, password: password, returnSecureToken: true };
 
-    return this.http.post<AuthResponse>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCbhSZWYUbZ20GPfDfu2CKyfrsyL6wdRTA', data)
+    return this.http.post<AuthResponse>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' + environment.firebaseAPIKEY, data)
       .pipe(catchError(this.handleerrors), tap((res) => {
         this.handlecreateuser(res);
       }));
@@ -36,7 +37,7 @@ export class AuthserviceService {
   login(email: string, password: string) {
     const data = { email: email, password: password, returnSecureToken: true };
 
-    return this.http.post<AuthResponse>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCbhSZWYUbZ20GPfDfu2CKyfrsyL6wdRTA', data)
+    return this.http.post<AuthResponse>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=' + environment.firebaseAPIKEY, data)
       .pipe(catchError(this.handleerrors), tap((res) => {
         this.handlecreateuser(res);
       }));

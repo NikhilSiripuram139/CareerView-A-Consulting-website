@@ -5,7 +5,6 @@
     color: white;
     position: fixed;
     top: 0;
-    /* background: linear-gradient( to bottom right, rgb(0, 0, 28), #15482f) ; */
     background-color: black;
 }
 
@@ -36,7 +35,6 @@
     color: #b6ee1a;
     font-family:"Permanent Marker", "Caveat", "Pacifico", cursive;
     font-weight: 400;
-    /* font-style: normal; */
     font-size: x-large;
     text-shadow: 3px 3px 10px gray;
 }
@@ -60,22 +58,13 @@
 }
 
 
-/* .login-box{
-    text-align: center; 
-    width: 25vw;
-    height: 50vh;
-    background-color: #6db1b9;
-    box-shadow: 5px 5px 30px 2px #555151;
-    border-radius: 2px;
-} */
-
 .login-form{
     position: absolute;
     top: 25vh;
     right: 20vw;
     display: inline-block;
     width: 25vw;
-    min-height: 50vh;
+    height: 50vh;
     background-color: white;
     border-radius: 2px;
 }
@@ -119,14 +108,10 @@ input{
     border-radius: 4px;
 }
 
-
 .login-form a{
     text-decoration: none;
     color: black;
-    /* margin-top: 5vh; */
 }
-
-
 
 @media (max-width:800px){
     .log-head{
@@ -148,5 +133,22 @@ input{
 @media (max-width:450px){
     .log-head{
         left: 20vw;
+    }
+}
+
+@media (max-width:431px) and (max-height:935px){    
+    .log-head{
+        left: 19vw;
+    }
+
+    .log-heading p{
+        font-size:small;
+    }    
+    
+    .login-form{
+        top: 35vh;
+        right: 12.5vw;
+        width: 75vw;
+        height: 40vh;
     }
 }

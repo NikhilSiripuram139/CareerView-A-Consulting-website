@@ -1,6 +1,6 @@
 .banner-container {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 100%;
     background: linear-gradient(50deg, black 65%, rgba(255, 255, 255, 0.073) 35%);
     display: flex;
     justify-content: center;
@@ -8,15 +8,15 @@
 
 .banner-main {
     min-height: 80vh;
-    padding-top: 13vh;
+    padding-top: 13%;
     animation: fadeout linear;
     animation-timeline: view();
     animation-range: exit -150px;
     animation-duration: 1ms;
 }
-
+ 
 .divider{
-    width: 60vw;
+    width: 65vw;
 }
 
 
@@ -60,7 +60,7 @@
     right: 0;
     z-index: -99;
     width: 70vw;
-    min-height: 100vh;
+    min-height: 80vh;
     overflow: hidden;
     background-position: initial;
     background-size: cover;
@@ -71,19 +71,8 @@
     animation-duration: 1ms;
 }
 
-/* .sideimg::before{
-    content:'';
-    left: 18.1em;
-    position:sticky;
-    top: 50%;
-    transform: translateY(-50%) rotate(20deg);
-    width: 40%;
-    background-color: black;
-    height: 120%;
-} */
 
 .banner-head {
-    /* width: 80vw; */
     padding-top: 15vh;
     min-height: 25vh;
     color: #177580;
@@ -138,4 +127,48 @@ i {
         font-size:x-large;
     }
 
+}
+
+@media (max-width:431px) and (max-height:935px){
+    .banner-container {
+        height: 70vh;
+        background: linear-gradient(50deg, black 65%, rgba(255, 255, 255, 0.034) 35%);
+    }
+    
+    .banner-main {
+        height: 30vh;
+    }
+
+    .sideimg {
+        display: none;
+    }
+
+    .banner-head {
+        min-height: 0vh;
+    }
+
+    .banner-head h1{
+        font-size:23px;
+    }
+    
+    .banner-description {
+        width: 65vw;
+        padding-top: 2vh;
+        font-size:medium;
+    }
+    
+    .search {
+        width: 45vw;
+        min-height: 3vh;
+        border-radius: 30px;
+    }
+    
+    .search-btn {
+        min-height: 3vh;
+    }
+    
+    i {
+        font-size: 13px;
+    }
+    
 }

@@ -1,9 +1,8 @@
-import { PreloadAllModules, PreloadingStrategy, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { LogComponent } from './header/log/log.component';
 import { CanActivate, resolve} from './authguard';
 import { HomeComponent } from './home/home.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { ContactComponent } from './home/contact/contact.component';
 
 
 export const routes: Routes = [

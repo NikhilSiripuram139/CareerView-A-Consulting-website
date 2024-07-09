@@ -1,21 +1,18 @@
 .contact-container{
     width: 100vw;
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
 }
 
 .contact-main{
     width: 80vw;
     margin: 0vh 10vw;
-}
+} 
 
 .contact-head{
     color: #177580;
     padding-top: 15vh;
-    /* padding-top: 70px; */
-    /* height: 30vh; */
     font-size: 50px;
     font-weight: bold;
     margin-left: 30px;
@@ -49,7 +46,6 @@
     width: 30vw;
     min-height: 5vh;
     margin-top: 5px;
-    /* margin: 2vh 2.2vw;  */
 }
 
 .email{
@@ -84,7 +80,6 @@
     width: 30vw;
     min-height: 5vh;
     margin-top: 5px;
-    /* margin: 2vh 2.2vw;  */
 }
 
 .region{
@@ -102,7 +97,6 @@
     width: 30vw;
     min-height: 5vh;
     margin-top: 5px;
-    /* margin: 2vh 2.1vw;  */
 }
 
 .meassage{
@@ -128,8 +122,6 @@ textarea{
     min-height: 5vh;
     margin: 2vh 2.1vw;
     background-color: #b6ee1a;
-    /* font-size: larger;
-    font-weight: bold; */
     cursor: pointer;
     scale: .8; opacity: 0.1;
     animation: fadein linear forwards;
@@ -147,4 +139,100 @@ textarea{
         font-size:xx-large;
     }
 
+}
+
+@media (max-width:431px) and (max-height:935px){
+    .contact-container{
+        min-height: 80%;
+    }
+    
+    .divider{
+        width: 80%;
+        margin: 0 10%;
+    }
+    .contact-main{
+        width: 80vw;
+        margin: 0vh 10vw;
+    } 
+    
+    .contact-head{
+        padding-top: 5vh;
+        font-size: 23px;
+        font-weight: bold;
+    }
+    
+    .contact-details{
+        width: 100%;
+        margin: 4vh 0vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .name{
+        width: 100%;
+        min-height: 5vh;
+        margin: .5vh 0vw;
+        display: block;
+    }
+    
+    #name{
+        width: 99.9%;
+        min-height: 3vh;
+    }
+    
+    .email{
+        width: 100%;
+        min-height: 5vh;
+        margin: .5vh 0vw;
+        display: block;
+    }
+    
+    #email{
+        width: 99.9%;
+        min-height: 3vh;
+    }
+    
+    .contact{
+        width: 100%;
+        min-height: 5vh;
+        margin: .5vh 0vw;
+        display: block;
+    }
+    
+    #contact{
+        width: 99.9%;
+        min-height: 3vh;
+    }
+    
+    .region{
+        width: 100%;
+        min-height: 5vh;
+        margin: .5vh 0vw;
+        display: block;
+    }
+    
+    #Region{
+        width: 100%;
+        min-height: 3vh;
+    }
+    
+    .meassage{
+        width: 100%;
+        min-height: 10vh;
+        margin: .5vh 0vw;
+    }
+    
+    
+    textarea{
+        width: 99%;
+        min-height: 8vh;
+        margin: .5vh 0; 
+    }
+    
+    .sub-btn{
+        width:100%;
+        min-height: 4vh;
+        margin: .5vh 0vw;
+    }
 }

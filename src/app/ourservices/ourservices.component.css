@@ -13,7 +13,6 @@
 
 .s-head{
     padding-top: 25vh;
-    /* height: 30vh; */
     color: #177580;
     font-size: 50px;
     font-weight: bold;
@@ -24,7 +23,6 @@
 .s-tagline{
     width: 100%;
     margin: 20vh 0vw;
-    /* height: 60vh; */
     color: white;
 }
 
@@ -48,22 +46,15 @@
 }
 
 .service-box{
+    margin-top: 5vh;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
 }
 
-/* .separater{
-    width: 80vw;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .servies{
-    min-height: 29vh;
+    height: 29vh;
     cursor: pointer;
     background-color: white;
     background-size: cover;
@@ -80,13 +71,8 @@
     box-shadow: 0px 5px 15px rgb(110, 110, 110);
 }
 
-
 .name{
-    font-size:x-large;
-    font-weight: bold;
-    color: black;
-    text-align: center;
-    /* width: 17vw; */
+    font-size:large;
     height: 6vh;
     margin: 0vh auto;
     margin-top: 22vh;
@@ -94,10 +80,6 @@
     background-color: #177580;
 }
 
-/* .descrip{
-    text-align: center;
-    margin-top: 5px;
-} */
 
 @keyframes heading-fadein {
     to { opacity: 1;}
@@ -114,5 +96,46 @@
 
     .maintag{
         font-size: 30px;
+    }
+}
+
+@media (max-width:431px) and (max-height:935px){    
+    .services-main{
+        margin: 2vh 10vw;
+    }
+    
+    .s-head{
+        padding-top: 15vh;
+        font-size: 23px;
+    }
+    
+    .s-tagline{
+        margin: 0vh 0vw;
+    }
+    
+    .maintag{
+        margin-top: 5vh;
+        font-size: 23px;
+    }
+    
+    .sidetag{
+        margin-top: 5vh;
+        margin-left: 5vw;
+        width: 90%;
+        font-size:medium;
+    }
+    
+    .servies{
+        height: 19vh;
+    }
+        
+    
+    .name{
+        font-size:large;
+        text-align: center;
+        height: 3vh;
+        margin: 0vh auto;
+        margin-top: 15vh;
+        padding-top: 1vh;
     }
 }

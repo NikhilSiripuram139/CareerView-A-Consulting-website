@@ -1,6 +1,6 @@
 .sectors-container{
     width: 100vw;
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,12 +10,11 @@
     width: 80vw;
     margin: 0 10vw;
 }
-
+ 
 .sector-heading{
     color: #177580;
     padding-bottom: 7vh;
     padding-top: 2vh;
-    /* height: 30vh; */
     font-size: 50px;
     font-weight: bold;
     text-align: center;
@@ -37,18 +36,9 @@
     gap: 15px;
 }
 
-/* .divider{
-    width: 90vw;
-    min-height: 50vh;
-    margin: 0 6vw;
-} */
   
 .sector{
-    /* width: 21vw; */
-    /* min-height: 29vh; */
-    /* margin: 1vh .5vw; */
     cursor: pointer;
-    /* display: inline-block; */
     background-color: white;
     background-size: cover;
     background-position: center;
@@ -83,7 +73,6 @@
 
 a{
     float: right;
-    /* margin-left: 62vw; */
     color: #177580;
     text-decoration: none;
 }
@@ -102,5 +91,43 @@ a:hover{
         font-size:x-large;
     }
 
+}
+
+@media (max-width:431px) and (max-height:935px){
+    .sectors-container{
+        width: 100vw;
+        min-height: 100%;
+    }
+     
+    .sector-heading{
+        font-size:23px;
+    }     
+    
+    .sectors-box{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .sector{
+        height: 10vh;
+    }
+    
+    .sectors-box a{
+        font-size: medium;
+    }
+    
+    .sector:hover{
+        margin: 0vh 0vw;
+        transform: scale(1.02);
+        box-shadow: 1px 3px 10px rgb(86, 85, 85);
+    }
+    
+    .name{
+        font-size: large;
+        font-weight: bold;
+        margin-top: 7vh;
+    }
 }
 
