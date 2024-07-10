@@ -171,3 +171,9 @@ a:hover{
         font-size:x-large;
     }
 }
+
+@media (max-width:422px){
+    a{
+        margin-left: 50vw;   
+    }
+}

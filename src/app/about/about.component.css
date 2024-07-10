@@ -18,7 +18,7 @@
 
 
 .section1{
-    height: 75vh;
+    min-height: 60vh;
     margin-top: 10vh;
     color: white;
     display: block;
@@ -57,7 +57,7 @@
 }
 
 .section2{
-    height: 75vh;
+    min-height: 60vh;
     color: white;
     display: inline-block;
 }
@@ -102,7 +102,7 @@
 }
 
 .section3{
-    height: 75vh;
+    min-height: 60vh;
     color: white;
     display: block;
     display: block;
@@ -146,7 +146,7 @@
 }
 
 .section4{
-    height: 75vh;
+    min-height: 60vh;
     color: white;
     display: block;
 }
@@ -190,7 +190,7 @@
 }
 
 .section5{
-    height: 75vh;
+    min-height: 60vh;
     color: white;
     display: block;
 }
@@ -471,7 +471,7 @@
     
     .s4-head{
         position: absolute;
-        margin-left: 51vw;
+        margin-left: 45vw;
         padding-top: 0vh;
         font-size: large;
     }

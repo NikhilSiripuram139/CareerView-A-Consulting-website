@@ -200,3 +200,22 @@
         margin-left: 0px;
     }
 }
+
+@media (max-width:416px){    
+    .copyright a{
+        font-weight: 20;
+        font-size: small;
+    }
+     
+    .socialid a{
+        margin: 0px 0px 0 5px;
+    }
+
+    .socialid i{
+        font-size:x-small;
+    }
+
+    .attachments2{
+        width: 45vw;
+    }
+}

@@ -111,17 +111,11 @@ a:hover{
     }
     
     .sector{
-        height: 10vh;
+        height: 15vh;
     }
     
     .sectors-box a{
         font-size: medium;
-    }
-    
-    .sector:hover{
-        margin: 0vh 0vw;
-        transform: scale(1.02);
-        box-shadow: 1px 3px 10px rgb(86, 85, 85);
     }
     
     .name{

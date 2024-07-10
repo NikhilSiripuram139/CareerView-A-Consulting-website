@@ -150,7 +150,7 @@
 
 .nameinput{
     width: 30vw;
-    height: 8vh;
+    min-height: 8vh;
     margin: 2vh 2.2vw;
     display: inline-block;
     font-size: large;
@@ -169,7 +169,7 @@
 
 .emailinput{
     width: 30vw;
-    height: 8vh;
+    min-height: 8vh;
     margin: 2vh 2.1vw;
     display: inline-block;
     font-size: large;
@@ -188,7 +188,7 @@
 
 .contactinput{
     width: 30vw;
-    height: 8vh;
+    min-height: 8vh;
     margin: 2vh 2.2vw;
     display: inline-block;
     font-size: large;
@@ -207,7 +207,7 @@
 
 .regioninput{
     width: 30vw;
-    height: 8vh;
+    min-height: 8vh;
     margin: 2vh 2.1vw;
     display: inline-block;
     font-size: large;
@@ -226,7 +226,7 @@
 
 .meassageinput{
     width: 65vw;
-    height: 18vh;
+    min-height: 15vh;
     margin: 2vh 2.1vw;
     font-size: large;
     font-weight: lighter;
@@ -246,7 +246,7 @@ textarea{
 .sub-btn{
     width: 65vw;
     height: 5vh;
-    margin: 2vh 2.1vw;
+    margin: 1vh 2.1vw;
     background-color: #b6ee1a;
     scale: .8; opacity: 0.1;
     animation: fadein linear forwards;
@@ -346,7 +346,7 @@ textarea{
 
     .nameinput{
         width: 85%;
-        height: 5vh;
+        height: 4vh;
         margin: 1vh 0vw;
         display: block;
     }
@@ -359,7 +359,7 @@ textarea{
     
     .emailinput{
         width: 85%;
-        height: 5vh;
+        height: 4vh;
         margin: 1vh 0vw;
         display: block;
     }
@@ -371,7 +371,7 @@ textarea{
     
     .contactinput{
         width: 85%;
-        height: 5vh;
+        height: 4vh;
         margin: 1vh 0vw;
         display: block;
     }
@@ -383,7 +383,7 @@ textarea{
     
     .regioninput{
         width: 86%;
-        height: 5vh;
+        height: 4vh;
         margin: 1vh 0vw;
         display: block;
     }
@@ -395,7 +395,7 @@ textarea{
     
     .meassageinput{
         width: 85%;
-        height: 10vh;
+        height: 8vh;
         margin: 1vh 0vw;
     }
     
