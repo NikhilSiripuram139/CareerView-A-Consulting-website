@@ -1,3 +1,3 @@
 export const environment = {
-    firebaseAPIKEY:// set your firbase API key.
+    firebaseAPIKEY:'AIzaSyCbhSZWYUbZ20GPfDfu2CKyfrsyL6wdRTA'
 };
